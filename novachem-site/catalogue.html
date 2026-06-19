@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chemical Product Catalogue — NovaChem</title>
+<meta name="description" content="Browse NovaChem's comprehensive range of high-performance cleaning agents, industrial degreasers, and hygiene solutions engineered for South African industry standards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">NovaChem</a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="catalogue.html" class="active">Catalogue</a>
+      <a href="about.html">About Us</a>
+      <a href="ratings.html">Ratings</a>
+    </nav>
+    <div class="header-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search product catalogue...">
+      </div>
+      <a href="ratings.html#review-form" class="btn btn-primary btn-sm">Contact Us</a>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-nav">
+    <a href="index.html">Home</a>
+    <a href="catalogue.html" class="active">Catalogue</a>
+    <a href="about.html">About Us</a>
+    <a href="ratings.html">Ratings</a>
+  </div>
+</header>
+
+<section class="simple-page-head section-light">
+  <div class="container">
+    <div class="section-head-row">
+      <div>
+        <span class="eyebrow">Industrial Integrity</span>
+        <h1 class="headline-lg" style="font-size:38px;">Chemical Product Catalogue</h1>
+        <p class="body-lg mt-1">Browse our comprehensive range of high-performance cleaning agents, industrial degreasers, and hygiene solutions engineered for South African industry standards.</p>
+      </div>
+      <span class="result-count">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg>
+        20 Products
+      </span>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light" style="padding-top:24px;">
+  <div class="container">
+
+    <div class="catalogue-toolbar">
+      <div class="filter-row">
+        <button class="filter-chip active" data-filter="all">All Products</button>
+        <button class="filter-chip" data-filter="cleaners">Cleaners</button>
+        <button class="filter-chip" data-filter="industrial">Industrial</button>
+        <button class="filter-chip" data-filter="hygiene">Hygiene</button>
+        <button class="filter-chip" data-filter="specialty">Specialty</button>
+      </div>
+      <select class="sort-select">
+        <option value="asc">Sort by Name (A-Z)</option>
+        <option value="desc">Sort by Name (Z-A)</option>
+      </select>
+    </div>
+
+    <div class="product-grid">
+
+      <!-- Cleaners -->
+      <article class="product-card" data-category="cleaners">
+        <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M9 2h6v4l3 3v11a2 2 0 01-2 2H8a2 2 0 01-2-2V9l3-3V2z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-CLN-001</div>
+          <h3 class="product-name">Tile Cleaner</h3>
+          <p class="product-desc">High-concentration acid-based cleaner for heavy-duty tile and grout maintenance.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="specialty">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M9 2h6v4l3 3v11a2 2 0 01-2 2H8a2 2 0 01-2-2V9l3-3V2z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-SPC-002</div>
+          <h3 class="product-name">Dish washing liquid</h3>
+          <p class="product-desc">Premium grease-cutting formula for commercial and residential kitchens.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">750ml / 5L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="specialty">
+        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M5 17a4 4 0 014-4h6a4 4 0 014 4M7 13l1-7h8l1 7"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-SPC-003</div>
+          <h3 class="product-name">Car Shampoo</h3>
+          <p class="product-desc">pH-neutral automotive wash with wax protection for industrial fleets.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="industrial">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-IND-004</div>
+          <h3 class="product-name">Multi Purpose Degreaser</h3>
+          <p class="product-desc">Powerful solvent-based degreaser for workshop floors and machinery.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L / 210L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="specialty">
+        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M9 2h6v4l3 3v11a2 2 0 01-2 2H8a2 2 0 01-2-2V9l3-3V2z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-SPC-005</div>
+          <h3 class="product-name">Bleach</h3>
+          <p class="product-desc">High-strength sodium hypochlorite for disinfecting and whitening surfaces.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="specialty">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><circle cx="12" cy="12" r="7"/><path d="M12 8v4l3 3"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-SPC-006</div>
+          <h3 class="product-name">Pine Gel</h3>
+          <p class="product-desc">Concentrated pine-scented gel cleaner with long-lasting fragrance release.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">2kg / 5kg / 25kg</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="hygiene">
+        <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-HYG-007</div>
+          <h3 class="product-name">Hand Sanitizer</h3>
+          <p class="product-desc">Fast-acting 70% alcohol sanitizer formulated for frequent industrial use.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">500ml / 5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="hygiene">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-hygiene">Hygiene</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M7 11V7a5 5 0 0110 0v4M5 11h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-HYG-008</div>
+          <h3 class="product-name">Hand Soap</h3>
+          <p class="product-desc">Gentle, dermatologically-tested liquid soap with moisturizing agents.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="hygiene">
+        <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M7 4h10l1 5a6 6 0 11-12 0z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-HYG-009</div>
+          <h3 class="product-name">Bubble Bath</h3>
+          <p class="product-desc">Rich foaming formula with a gentle, skin-friendly surfactant base.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="industrial">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M7 11V7a5 5 0 0110 0v4M5 11h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-IND-010</div>
+          <h3 class="product-name">Grit Hand Cleaner</h3>
+          <p class="product-desc">Abrasive heavy-duty hand cleaner for removing grease, oil, and grime.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">2kg / 5kg / 25kg</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="specialty">
+        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-SPC-011</div>
+          <h3 class="product-name">Handy Andy</h3>
+          <p class="product-desc">Versatile cream cleanser that lifts stains without scratching surfaces.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="cleaners">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M3 3l18 18M21 3L3 21"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-CLN-012</div>
+          <h3 class="product-name">Window Cleaner</h3>
+          <p class="product-desc">Streak-free glass and mirror cleaner with fast-evaporating formula.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="hygiene">
+        <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M4 4h16v4H4zM4 12h16v8H4z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-HYG-013</div>
+          <h3 class="product-name">Fabric Softener</h3>
+          <p class="product-desc">Industrial-grade softener for bulk laundry with a long-lasting fresh scent.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="cleaners">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M5 13l4 4L19 7"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-CLN-014</div>
+          <h3 class="product-name">All Purpose Cleaner</h3>
+          <p class="product-desc">Multi-surface everyday cleaner safe for tile, counter, and plastic surfaces.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="industrial">
+        <div class="media-block tone-light"><span class="product-category-tag tag-industrial">Industrial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M12 2v20M2 12h20"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-IND-015</div>
+          <h3 class="product-name">Silicon</h3>
+          <p class="product-desc">High-gloss silicon polish for dashboards, tires, and rubber seals.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">500ml / Tubes</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="specialty">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M12 3v6m0 0a4 4 0 014 4c0 3-4 8-4 8s-4-5-4-8a4 4 0 014-4z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-SPC-016</div>
+          <h3 class="product-name">Air Freshner</h3>
+          <p class="product-desc">Long-lasting aerosol fragrance for offices, vehicles, and washrooms.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="industrial">
+        <div class="media-block tone-light"><span class="product-category-tag tag-industrial">Industrial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><path d="M12 2C9 6 6 9 6 13a6 6 0 0012 0c0-4-3-7-6-11z"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-IND-017</div>
+          <h3 class="product-name">Pine Disinfect</h3>
+          <p class="product-desc">Hospital-grade pine disinfectant for factory floors and washrooms.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="cleaners">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><ellipse cx="12" cy="17" rx="7" ry="3"/><path d="M5 17V9a7 7 0 0114 0v8"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-CLN-018</div>
+          <h3 class="product-name">Toilet Cleaner</h3>
+          <p class="product-desc">Thick-gel descaler with disinfecting action for porcelain surfaces.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="cleaners">
+        <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h6M9 11h6"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-CLN-019</div>
+          <h3 class="product-name">Oven Cleaner</h3>
+          <p class="product-desc">Heavy-duty caustic foam that cuts through baked-on grease and carbon.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="cleaners">
+        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="34" height="34"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div class="product-card-body">
+          <div class="product-sku">SKU: NC-CLN-020</div>
+          <h3 class="product-name">Drain Cleaner</h3>
+          <p class="product-desc">Fast-acting formula that dissolves grease, hair, and organic blockages.</p>
+          <div class="product-card-footer">
+            <span class="product-sizes">5L / 25L</span>
+            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="catalogue-cta">
+      <div>
+        <span class="eyebrow">Request a Technical Data Sheet (SDS)</span>
+        <p class="body-md">All NovaChem products are manufactured under strict laboratory conditions. We provide comprehensive safety documentation for compliance with industrial health and safety standards.</p>
+        <div class="hero-cta">
+          <a href="ratings.html#review-form" class="btn btn-primary">Request Batch Report</a>
+          <a href="about.html" class="btn btn-ghost-light" style="border-color:#fff;">Safety Protocols</a>
+        </div>
+      </div>
+      <div class="assurance-box">
+        <span class="label-caps" style="color:rgba(255,255,255,0.6);">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:6px;"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg>
+          Quality Assurance Certified
+        </span>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ISO 9001:2015 Compliant</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Biodegradable Formulations</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> High-Active Concentration</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>NovaChem</h4>
+        <p>Providing professional chemical solutions for industry, commerce, and hygiene across Southern Africa since 2024.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Product Lines</div>
+        <ul>
+          <li><a href="catalogue.html">Cleaners</a></li>
+          <li><a href="catalogue.html">Industrial Degreasers</a></li>
+          <li><a href="catalogue.html">Hygiene Solutions</a></li>
+          <li><a href="catalogue.html">Specialty Chemicals</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Legal &amp; Compliance</div>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Safety Data Sheets</a></li>
+          <li><a href="#">Logistics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Headquarters</div>
+        <ul>
+          <li>Durban, South Africa</li>
+          <li>073 130 3530</li>
+          <li>novachem.future@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2024 NovaChem, Durban, South Africa. 073 130 3530 | novachem.future@gmail.com</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
