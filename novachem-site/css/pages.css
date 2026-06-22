@@ -448,3 +448,20 @@
 .star-input button { color: inherit; line-height: 1; padding: 0; }
 .star-input button.active,
 .star-input button:hover { color: var(--primary-strong); }
+
+/* ==========================================================================
+   Legal pages (Privacy Policy / Terms of Service)
+   ========================================================================== */
+
+.legal-heading-lg {
+  font-size: 38px;
+}
+
+.legal-content {
+  max-width: 760px;
+}
+
+.legal-heading-sm {
+  font-size: 24px;
+  margin-top: 32px;
+}
