@@ -13,18 +13,48 @@ document.addEventListener('DOMContentLoaded', function () {
   // Catalogue filter chips
   var chips = document.querySelectorAll('.filter-chip');
   var cards = document.querySelectorAll('.product-card');
+  var searchInput = document.querySelector('.catalogue-search');
+  var resultCount = document.querySelector('.result-count');
   if (chips.length && cards.length) {
+    var updateResultCount = function () {
+      if (!resultCount) return;
+      var svg = resultCount.querySelector('svg');
+      var svgHtml = svg ? svg.outerHTML : '';
+      var visible = Array.prototype.slice.call(cards).filter(function (c) { return c.style.display !== 'none'; }).length;
+      resultCount.innerHTML = svgHtml + ' ' + visible + ' Products';
+    };
+
+    var updateVisibleCards = function () {
+      var activeChip = document.querySelector('.filter-chip.active');
+      var activeFilter = activeChip ? activeChip.getAttribute('data-filter') : 'all';
+      var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+      cards.forEach(function (card) {
+        var category = card.getAttribute('data-category');
+        var name = card.querySelector('.product-name').textContent.toLowerCase();
+        var sku = card.querySelector('.product-sku').textContent.toLowerCase();
+        var desc = card.querySelector('.product-desc').textContent.toLowerCase();
+        var matchesCategory = (activeFilter === 'all' || category === activeFilter);
+        var matchesSearch = (query === '' || name.indexOf(query) !== -1 || sku.indexOf(query) !== -1 || desc.indexOf(query) !== -1);
+        card.style.display = (matchesCategory && matchesSearch) ? '' : 'none';
+      });
+      updateResultCount();
+    };
+
     chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
         chips.forEach(function (c) { c.classList.remove('active'); });
         chip.classList.add('active');
-        var filter = chip.getAttribute('data-filter');
-        cards.forEach(function (card) {
-          var category = card.getAttribute('data-category');
-          card.style.display = (filter === 'all' || category === filter) ? '' : 'none';
-        });
+        updateVisibleCards();
       });
     });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        updateVisibleCards();
+      });
+    }
+    // Initialize visibility/count on load
+    updateVisibleCards();
   }
 
   // Catalogue sort
