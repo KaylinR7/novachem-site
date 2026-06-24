@@ -593,6 +593,27 @@ input, textarea, select {
   color: var(--steel-gray);
 }
 
+.icon-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+  padding: 24px;
+}
+
+.icon-feature svg {
+  width: 44px;
+  height: 44px;
+  opacity: 0.9;
+}
+
+.icon-feature .label-caps {
+  color: inherit;
+  opacity: 0.85;
+  font-size: 11px;
+}
+
 /* Two-column feature */
 .split {
   display: grid;
