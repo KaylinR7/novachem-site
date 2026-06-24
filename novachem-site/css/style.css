@@ -679,11 +679,6 @@ input, textarea, select {
 
 @media (min-width: 640px) {
   .card-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
-  .card-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1024px) {
-  .card-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
 .category-card {
