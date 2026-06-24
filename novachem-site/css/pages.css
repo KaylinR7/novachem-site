@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Catalogue page
-   ========================================================================== */
+    Catalogue page
+    ========================================================================== */
 
 .catalogue-toolbar {
   display: flex;
@@ -86,6 +86,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: var(--gutter);
+  overflow-x: hidden;
 }
 
 @media (min-width: 768px) {
@@ -207,6 +208,12 @@
   .catalogue-cta { grid-template-columns: 1.3fr 1fr; align-items: center; }
 }
 
+@media (max-width: 767px) {
+  .catalogue-cta {
+    padding: 24px 16px;
+  }
+}
+
 .catalogue-cta .body-md { color: rgba(255,255,255,0.7); margin: 10px 0 22px; }
 
 .assurance-box {
@@ -233,8 +240,8 @@
 .assurance-box svg { color: var(--primary-strong); flex-shrink: 0; margin-top: 1px; }
 
 /* ==========================================================================
-   Legal pages (Privacy Policy / Terms of Service)
-   ========================================================================== */
+    Legal pages (Privacy Policy / Terms of Service)
+    ========================================================================== */
 
 .legal-heading-lg {
   font-size: 38px;
