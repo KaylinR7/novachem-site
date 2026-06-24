@@ -483,6 +483,30 @@ input, textarea, select {
   gap: 16px;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hero-media {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .hero-media {
+    margin-left: 75px;
+  }
+}
+
 .hero-pillar {
   position: absolute;
   top: 0;
