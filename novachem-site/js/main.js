@@ -61,16 +61,25 @@ document.addEventListener('DOMContentLoaded', function () {
   var sortSelect = document.querySelector('.sort-select');
   var grid = document.querySelector('.product-grid');
   if (sortSelect && grid) {
-    sortSelect.addEventListener('change', function () {
-      var items = Array.prototype.slice.call(grid.children);
-      var direction = sortSelect.value === 'desc' ? -1 : 1;
+    var sortProducts = function (direction) {
+      var items = Array.prototype.slice.call(grid.children).filter(function (item) {
+        return item.classList && item.classList.contains('product-card');
+      });
       items.sort(function (a, b) {
         var nameA = a.querySelector('.product-name').textContent.trim();
         var nameB = b.querySelector('.product-name').textContent.trim();
         return nameA.localeCompare(nameB) * direction;
       });
       items.forEach(function (item) { grid.appendChild(item); });
+    };
+
+    sortSelect.addEventListener('change', function () {
+      var direction = sortSelect.value === 'desc' ? -1 : 1;
+      sortProducts(direction);
     });
+
+    sortSelect.value = 'asc';
+    sortProducts(1);
   }
 
   // Star input on the review form
