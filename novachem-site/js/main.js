@@ -85,17 +85,74 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Review form submit (no backend — static demo)
-  var reviewForm = document.querySelector('.review-form');
-  if (reviewForm) {
-    reviewForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var btn = reviewForm.querySelector('button[type="submit"]');
-      var original = btn.textContent;
-      btn.textContent = 'Thank you — review submitted';
-      setTimeout(function () { btn.textContent = original; }, 2500);
-      reviewForm.reset();
-      starButtons.forEach(function (b) { b.classList.remove('active'); });
+  // Product detail modal
+  var overlay    = document.getElementById('productModalOverlay');
+  var closeBtn   = document.getElementById('modalCloseBtn');
+  var productCards = document.querySelectorAll('.product-card');
+
+  if (overlay && productCards.length) {
+    var tagColorMap = {
+      cleaners:  'var(--primary-strong)',
+      industrial:'var(--tertiary-steel)',
+      hygiene:   '#3d4d63',
+      specialty: 'var(--charcoal-ink)'
+    };
+
+    function openModal(card) {
+      var img       = card.querySelector('img');
+      var name      = card.querySelector('.product-name').textContent;
+      var sku       = card.querySelector('.product-sku').textContent;
+      var shortDesc = card.querySelector('.product-desc').textContent;
+      var sizes     = card.querySelector('.product-sizes').textContent.trim();
+      var fullDesc  = card.getAttribute('data-full-desc') || '';
+      var uses      = card.getAttribute('data-uses') || '';
+      var category  = card.getAttribute('data-category') || '';
+      var catTag    = card.querySelector('.product-category-tag');
+
+      document.getElementById('modalImage').src = img ? img.src : '';
+      document.getElementById('modalImage').alt = img ? img.alt : name;
+      document.getElementById('modalProductName').textContent = name;
+      document.getElementById('modalSku').textContent = sku;
+      document.getElementById('modalSizes').textContent = sizes;
+      document.getElementById('modalShortDesc').textContent = shortDesc;
+      document.getElementById('modalFullDesc').textContent = fullDesc;
+
+      var modalCatTag = document.getElementById('modalCategoryTag');
+      modalCatTag.textContent = catTag ? catTag.textContent : category;
+      modalCatTag.style.background = tagColorMap[category] || '#444';
+
+      var usesTags = document.getElementById('modalUsesTags');
+      usesTags.innerHTML = '';
+      if (uses) {
+        uses.split('|').forEach(function(u) {
+          var span = document.createElement('span');
+          span.className = 'modal-use-tag';
+          span.textContent = u.trim();
+          usesTags.appendChild(span);
+        });
+      }
+
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    productCards.forEach(function(card) {
+      card.addEventListener('click', function() { openModal(card); });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+
+    overlay.addEventListener('click', function(e) {
+      if (e.target === overlay) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeModal();
     });
   }
 });
