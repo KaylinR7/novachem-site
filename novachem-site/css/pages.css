@@ -262,16 +262,19 @@
 
 .product-card { cursor: pointer; }
 
+/* Overlay */
 .product-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 20, 30, 0.65);
+  background: rgba(10, 14, 22, 0.72);
   z-index: 1000;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 
 .product-modal-overlay.open {
@@ -279,61 +282,76 @@
   pointer-events: all;
 }
 
+/* Panel — centered dialog */
 .product-modal-panel {
   background: #fff;
   width: 100%;
-  max-width: 520px;
-  height: 100%;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  max-width: 900px;
+  max-height: 88vh;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.28);
+  transform: scale(0.94) translateY(12px);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.25s ease;
+  opacity: 0;
   position: relative;
 }
 
 .product-modal-overlay.open .product-modal-panel {
-  transform: translateX(0);
+  transform: scale(1) translateY(0);
+  opacity: 1;
 }
 
+/* Close button */
 .modal-close-btn {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 36px;
-  height: 36px;
+  top: 14px;
+  right: 14px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.92);
   border: 1px solid var(--border-default);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--charcoal-ink);
   z-index: 10;
-  transition: background 0.15s ease;
+  transition: background 0.15s ease, transform 0.15s ease;
+  backdrop-filter: blur(4px);
 }
 
-.modal-close-btn:hover { background: var(--surface-container-low); }
+.modal-close-btn:hover {
+  background: var(--surface-container-low);
+  transform: scale(1.08);
+}
 
+/* Left column — image */
 .modal-image-wrap {
   position: relative;
-  width: 100%;
-  height: 260px;
   background: var(--surface-container-low);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
   overflow: hidden;
-  flex-shrink: 0;
 }
 
 .modal-image-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  padding: 32px;
+  box-sizing: border-box;
   display: block;
 }
 
 .modal-category-tag {
   position: absolute;
-  bottom: 14px;
+  top: 14px;
   left: 14px;
   font-family: var(--font-mono);
   font-size: 10px;
@@ -345,12 +363,14 @@
   color: #fff;
 }
 
+/* Right column — content */
 .modal-content-wrap {
-  padding: 28px 28px 40px;
+  padding: 32px 32px 28px;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  flex: 1;
+  overflow-y: auto;
+  max-height: 88vh;
 }
 
 .modal-meta {
@@ -371,7 +391,7 @@
 
 .modal-product-name {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 800;
   color: var(--charcoal-ink);
   line-height: 1.2;
@@ -393,7 +413,7 @@
 .modal-full-desc {
   font-size: 14px;
   color: var(--on-surface);
-  line-height: 1.75;
+  line-height: 1.78;
   margin: 0;
 }
 
@@ -441,19 +461,32 @@
 
 .modal-enquire-btn:hover { background: var(--primary-strong); }
 
+/* Mobile — slide up from bottom (unchanged) */
 @media (max-width: 600px) {
+  .product-modal-overlay {
+    padding: 0;
+    align-items: flex-end;
+    justify-content: center;
+  }
   .product-modal-panel {
+    grid-template-columns: 1fr;
     max-width: 100%;
-    height: 90vh;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    max-height: 90vh;
     border-radius: 18px 18px 0 0;
     transform: translateY(100%);
+    opacity: 1;
+    box-shadow: 0 -8px 40px rgba(0,0,0,0.2);
   }
-  .product-modal-overlay { align-items: flex-end; }
-  .product-modal-overlay.open .product-modal-panel { transform: translateY(0); }
-  .modal-image-wrap { height: 200px; }
-  .modal-content-wrap { padding: 20px 20px 32px; }
+  .product-modal-overlay.open .product-modal-panel {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .modal-image-wrap {
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .modal-content-wrap {
+    padding: 20px 20px 32px;
+    max-height: calc(90vh - 200px);
+  }
 }
