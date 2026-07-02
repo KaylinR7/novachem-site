@@ -40,6 +40,18 @@ document.addEventListener('DOMContentLoaded', function () {
       updateResultCount();
     };
 
+    var params = new URLSearchParams(window.location.search);
+    var requestedFilter = params.get('cat');
+    if (requestedFilter) {
+      var matchingChip = Array.prototype.slice.call(chips).find(function (chip) {
+        return chip.getAttribute('data-filter') === requestedFilter;
+      });
+      if (matchingChip) {
+        chips.forEach(function (chip) { chip.classList.remove('active'); });
+        matchingChip.classList.add('active');
+      }
+    }
+
     chips.forEach(function (chip) {
       chip.addEventListener('click', function () {
         chips.forEach(function (c) { c.classList.remove('active'); });
