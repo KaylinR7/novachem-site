@@ -286,8 +286,8 @@
 .product-modal-panel {
   background: #fff;
   width: 100%;
-  max-width: 900px;
-  max-height: 88vh;
+  max-width: 1100px;
+  max-height: 92vh;
   border-radius: var(--radius-lg);
   overflow: hidden;
   display: grid;
@@ -335,7 +335,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 400px;
+  min-height: 480px;
   overflow: hidden;
 }
 
@@ -415,6 +415,56 @@
   color: var(--on-surface);
   line-height: 1.78;
   margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  overflow: hidden;
+}
+
+.modal-full-desc p,
+.modal-full-desc ul {
+  margin: 0 0 10px;
+}
+
+.modal-full-desc ul {
+  padding-left: 18px;
+}
+
+.modal-full-desc li + li {
+  margin-top: 4px;
+}
+
+.modal-full-desc strong {
+  color: var(--charcoal-ink);
+}
+
+.modal-full-desc.is-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+}
+
+.modal-full-desc-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal-show-more-btn {
+  align-self: flex-start;
+  border: none;
+  background: none;
+  color: var(--primary-strong);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+}
+
+.modal-show-more-btn:hover {
+  text-decoration: underline;
 }
 
 .modal-uses { display: flex; flex-direction: column; gap: 10px; }

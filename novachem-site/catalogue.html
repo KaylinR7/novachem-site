@@ -15,7 +15,7 @@
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="logo">NovaChem</a>
+    <a href="index.html" class="logo"><span class="logo-main">NovaChem Innovations</span><span class="logo-suffix">(Pty) Ltd</span></a>
     <nav class="main-nav">
       <a href="index.html">Home</a>
       <a href="catalogue.html" class="active">Catalogue</a>
@@ -297,7 +297,7 @@
       </article>
 
       <article class="product-card" data-category="specialty"
-        data-full-desc="NovaChem Air Freshener is a long-lasting aerosol fragrance formulated to neutralise odours and fill spaces with a pleasant, lasting scent. Unlike surface sprays, this formula targets airborne odour molecules directly, providing immediate and sustained freshness. Available in multiple fragrance variants suitable for different environments. Ideal for use in offices, reception areas, restrooms, vehicles, hotel rooms, and retail spaces."
+        data-full-desc="<p>Our alcohol-based air freshener is a fast-acting fragrance solution designed to remove unwanted odours and refresh indoor spaces with a clean, lasting scent.</p><p>It is ideal for homes, offices, hotels, retail environments, vehicles, gyms and other public facilities. A light mist provides immediate freshness without leaving behind a sticky residue.</p><p><strong>Key features</strong></p><ul><li>Fast-drying alcohol-based formula</li><li>Instantly freshens and deodorises indoor air</li><li>Long-lasting, pleasant fragrance</li><li>Leaves no oily or sticky residue</li></ul><p><strong>Intended use</strong></p><ul><li>Homes and offices</li><li>Hotels, restaurants and retail stores</li><li>Vehicles, gyms and public facilities</li></ul><p><strong>Important handling</strong></p><p>Highly flammable. Keep away from heat, sparks and open flames. Avoid contact with eyes and skin, and use only in well-ventilated areas.</p>"
         data-uses="Commercial|Automotive|Hospitality|Retail">
         <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/air-freshner.jpg" alt="Air Freshner"></div>
         <div class="product-card-body">
@@ -743,7 +743,10 @@
       <h2 class="modal-product-name" id="modalProductName"></h2>
       <p class="modal-short-desc" id="modalShortDesc"></p>
       <div class="modal-divider"></div>
-      <p class="modal-full-desc" id="modalFullDesc"></p>
+      <div class="modal-full-desc-wrap">
+        <p class="modal-full-desc" id="modalFullDesc"></p>
+        <button class="modal-show-more-btn" id="modalShowMoreBtn" type="button">Show more</button>
+      </div>
       <div class="modal-uses" id="modalUsesWrap">
         <div class="modal-uses-label">Suitable For</div>
         <div class="modal-uses-tags" id="modalUsesTags"></div>

@@ -123,8 +123,14 @@ document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('modalProductName').textContent = name;
       document.getElementById('modalSku').textContent = sku;
       document.getElementById('modalSizes').textContent = sizes;
+      var modalFullDesc = document.getElementById('modalFullDesc');
+      var modalShowMoreBtn = document.getElementById('modalShowMoreBtn');
+      modalFullDesc.innerHTML = fullDesc;
+      modalFullDesc.classList.remove('is-expanded');
+      if (modalShowMoreBtn) {
+        modalShowMoreBtn.textContent = 'Show more';
+      }
       document.getElementById('modalShortDesc').textContent = shortDesc;
-      document.getElementById('modalFullDesc').textContent = fullDesc;
 
       var modalCatTag = document.getElementById('modalCategoryTag');
       modalCatTag.textContent = catTag ? catTag.textContent : category;
@@ -148,6 +154,24 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModal() {
       overlay.classList.remove('open');
       document.body.style.overflow = '';
+      var modalFullDesc = document.getElementById('modalFullDesc');
+      var modalShowMoreBtn = document.getElementById('modalShowMoreBtn');
+      if (modalFullDesc) {
+        modalFullDesc.classList.remove('is-expanded');
+      }
+      if (modalShowMoreBtn) {
+        modalShowMoreBtn.textContent = 'Show more';
+      }
+    }
+
+    var modalShowMoreBtn = document.getElementById('modalShowMoreBtn');
+    if (modalShowMoreBtn) {
+      modalShowMoreBtn.addEventListener('click', function () {
+        var modalFullDesc = document.getElementById('modalFullDesc');
+        if (!modalFullDesc) return;
+        var isExpanded = modalFullDesc.classList.toggle('is-expanded');
+        modalShowMoreBtn.textContent = isExpanded ? 'Show less' : 'Show more';
+      });
     }
 
     productCards.forEach(function(card) {
