@@ -985,3 +985,58 @@ input, textarea, select {
     gap: 24px;
   }
 }
+
+/* ==========================================================================
+    Infinite Marquee
+    ========================================================================== */
+
+.marquee-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--primary-strong);
+  border-bottom: 1px solid var(--primary-strong);
+}
+
+.marquee-container {
+  display: flex;
+  width: fit-content;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.marquee-content span {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
