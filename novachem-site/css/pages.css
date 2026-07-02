@@ -136,6 +136,9 @@
 .tag-cleaners { background: var(--primary-strong); }
 .tag-industrial { background: var(--tertiary-steel); }
 .tag-hygiene { background: #3d4d63; }
+.tag-automotive { background: #0f766e; }
+.tag-laundry { background: #7c3aed; }
+.tag-equipment { background: #475569; }
 .tag-specialty { background: var(--charcoal-ink); }
 
 .product-card-body {

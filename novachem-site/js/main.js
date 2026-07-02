@@ -104,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function () {
       cleaners:  'var(--primary-strong)',
       industrial:'var(--tertiary-steel)',
       hygiene:   '#3d4d63',
+      automotive:'#0f766e',
+      laundry:   '#7c3aed',
+      equipment: '#475569',
       specialty: 'var(--charcoal-ink)'
     };
 
