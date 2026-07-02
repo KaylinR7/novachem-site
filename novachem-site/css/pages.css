@@ -427,7 +427,8 @@
 }
 
 .modal-full-desc ul {
-  padding-left: 18px;
+  padding-left: 20px;
+  list-style: disc;
 }
 
 .modal-full-desc li + li {
