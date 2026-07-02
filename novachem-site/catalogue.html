@@ -1,802 +1,1021 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chemical Product Catalogue — NovaChem</title>
-<meta name="description" content="Browse NovaChem's comprehensive range of high-performance cleaning agents, industrial degreasers, and hygiene solutions engineered for South African industry standards.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/pages.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Product Catalogue — NovaChem</title>
+  <meta name="description"
+    content="Browse NovaChem's comprehensive range of high-performance cleaning agents, industrial degreasers, and hygiene solutions engineered for South African industry standards.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Inter:wght@400;500&family=JetBrains+Mono:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="logo"><span class="logo-main">NovaChem Innovations</span><span class="logo-suffix">(Pty) Ltd</span></a>
-    <nav class="main-nav">
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo"><span class="logo-main">NovaChem Innovations</span><span
+          class="logo-suffix">(Pty) Ltd</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="catalogue.html" class="active">Catalogue</a>
+        <a href="about.html">About Us</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav">
       <a href="index.html">Home</a>
       <a href="catalogue.html" class="active">Catalogue</a>
       <a href="about.html">About Us</a>
-    </nav>
-    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-  </div>
-  <div class="mobile-nav">
-    <a href="index.html">Home</a>
-    <a href="catalogue.html" class="active">Catalogue</a>
-    <a href="about.html">About Us</a>
-  </div>
-</header>
-
-<section class="simple-page-head section-light">
-  <div class="container">
-    <div class="section-head-row">
-      <div>
-        <span class="eyebrow">Industrial Integrity</span>
-        <h1 class="headline-lg" style="font-size:38px;">Chemical Product Catalogue</h1>
-        <p class="body-lg mt-1">Browse our comprehensive range of high-performance cleaning agents, industrial degreasers, and hygiene solutions engineered for South African industry standards.</p>
-      </div>
-      <span class="result-count">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg>
-        37 Products
-      </span>
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section section-light" style="padding-top:24px;">
-  <div class="container">
-
-    <div class="catalogue-toolbar">
-      <div class="filter-row">
-        <button class="filter-chip active" data-filter="all">All Products</button>
-        <button class="filter-chip" data-filter="cleaners">Cleaners</button>
-        <button class="filter-chip" data-filter="industrial">Industrial</button>
-        <button class="filter-chip" data-filter="hygiene">Hygiene</button>
-        <button class="filter-chip" data-filter="specialty">Specialty</button>
-        <button class="filter-chip" data-filter="equipment">Equipment</button>
-      </div>
-      <div class="catalogue-controls">
-        <input type="search" class="catalogue-search" placeholder="Search products, SKU or description" aria-label="Search products">
-        <select class="sort-select">
-          <option value="asc" selected>Sort by Name (A-Z)</option>
-          <option value="desc">Sort by Name (Z-A)</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="product-grid">
-
-      <!-- Cleaners -->
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="NovaChem Tile Cleaner is a high-concentration acid-based formula designed for deep cleaning of ceramic, porcelain, and natural stone tiles. It effectively dissolves mineral deposits, limescale, soap scum, and heavy grout staining without damaging tile surfaces. Ideal for bathrooms, kitchens, industrial washrooms, and commercial food preparation areas. Dilute with water for regular maintenance or apply at full strength for deep-clean applications."
-        data-uses="Household|Commercial|Industrial">
-        <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/tile-cleaner.jpg" alt="Tile Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-001</div>
-          <h3 class="product-name">Tile Cleaner</h3>
-          <p class="product-desc">High-concentration acid-based cleaner for heavy-duty tile and grout maintenance.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
+  <section class="simple-page-head section-light">
+    <div class="container">
+      <div class="section-head-row">
+        <div>
+          <span class="eyebrow">Industrial Integrity</span>
+          <h1 class="headline-lg" style="font-size:38px;">Chemical Product Catalogue</h1>
+          <p class="body-lg mt-1">Browse our comprehensive range of high-performance cleaning agents, industrial
+            degreasers, and hygiene solutions engineered for South African industry standards.</p>
         </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="NovaChem Dishwashing Liquid is a premium grease-cutting formula enriched with surfactants that break down tough food residue, oils, and fats quickly and efficiently. Its gentle yet powerful formulation is safe on hands during prolonged use and produces a rich, lasting lather even in hard water conditions. Suitable for hand-washing dishes, pots, and utensils in both household kitchens and high-volume commercial kitchens and canteens."
-        data-uses="Household|Commercial|Food Service">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/dish-washing-liquid.jpg
-          " alt="Dish washing liquid"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-002</div>
-          <h3 class="product-name">Dish washing liquid</h3>
-          <p class="product-desc">Premium grease-cutting formula for commercial and residential kitchens.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">750ml / 5L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="NovaChem Car Shampoo is a pH-neutral automotive wash solution specially formulated to clean vehicle bodywork without stripping wax or protective coatings. Its lubricating formula lifts dirt and grime safely away from painted surfaces, preventing swirl marks and micro-scratches during the wash process. Contains built-in wax protection agents that add a subtle shine to the finish. Ideal for fleet washing, car wash bays, and everyday vehicle maintenance."
-        data-uses="Automotive|Fleet Management|Car Wash">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/car-shampoo.jpg" alt="Car Shampoo"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-003</div>
-          <h3 class="product-name">Car Shampoo</h3>
-          <p class="product-desc">pH-neutral automotive wash with wax protection for industrial fleets.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="industrial"
-        data-full-desc="NovaChem Multi Purpose Degreaser is a powerful solvent-based cleaning agent formulated to cut through heavy grease, oil, hydraulic fluid, and carbon deposits on a wide range of surfaces. It is designed for use in workshops, factories, garages, and industrial plants where heavy contamination is a daily challenge. Safe on metal, concrete, and most painted surfaces when used as directed. Available in concentrated form for economical dilution or ready-to-use for spot applications."
-        data-uses="Industrial|Automotive|Workshops|Manufacturing">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><img src="images/products/multi-purpose-degreaser.jpg" alt="Multi Purpose Degreaser"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-IND-004</div>
-          <h3 class="product-name">Multi Purpose Degreaser</h3>
-          <p class="product-desc">Powerful solvent-based degreaser for workshop floors and machinery.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L </span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="<p>Regular bleach has a chlorine content of 5% and is stronger than the normal bleach sold in shops and supermarkets. Not only does it bleach, it also disinfects, deodorizes and sanitizes. It should only be used on cottons, linens, whites and fast colours. If in any doubt, please do a test on a small piece of the material first. With this cleaning product you would only need to use half the normal amount of bleach because our bleach is so concentrated.</p><p><strong>Usage Instructions</strong></p><ul><li><strong>Whiter Wash:</strong> Mix 15 ml of bleach to 5 litres of water. Add laundry and soak for 15 minutes. Wash thoroughly. (White fabrics only).</li><li><strong>Stubborn Stains:</strong> Soak item in warm water for 10 mins, then soak in 100 ml bleach to 5 litres cold water for 10-20 mins. Wash thoroughly.</li><li><strong>Disinfect &amp; Deodorize:</strong> Mix 100 ml of bleach with 5 litres of warm water. Wash item, leave in mixture for 5 mins, and rinse thoroughly.</li></ul><p><strong>Important Safety &amp; Handling</strong></p><p>Always check clothing labels. Do not use on waffle cloth, pique, rayon, satin and wool. Keep out of reach of children. Wear safety eyewear, rubber gloves and suitable overalls. Always wash hands after use and do not ingest. If skin irritation persists, seek medical advice. If product splashes into your eyes, wash with clean, running water for at least 10 minutes and seek medical advice. If ingested, seek medical attention. Store in a cool, dry place.</p>"
-        data-uses="Household|Commercial|Healthcare|Food Processing">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/bleach.jpg" alt="Bleach"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-005</div>
-          <h3 class="product-name">Bleach</h3>
-          <p class="product-desc">High-strength sodium hypochlorite for disinfecting and whitening surfaces.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="NovaChem Pine Gel is a thick, concentrated pine-scented gel cleaner that combines powerful cleaning action with a long-lasting fresh fragrance. The viscous formula clings to surfaces for extended contact time, ensuring thorough disinfection and deodorisation of floors, bathrooms, and drains. It is effective against a broad spectrum of bacteria and leaves a refreshing pine scent that neutralises unpleasant odours. Ideal for schools, offices, shopping centres, hospitals, and domestic use."
-        data-uses="Household|Commercial|Healthcare|Schools">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/pine-gel.jpg" alt="Pine Gel"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-006</div>
-          <h3 class="product-name">Pine Gel</h3>
-          <p class="product-desc">Concentrated pine-scented gel cleaner with long-lasting fragrance release.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">2kg / 5kg / 25kg</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="hygiene"
-        data-full-desc="NovaChem Hand Sanitizer is a fast-acting, 70% alcohol-based sanitizing solution formulated for frequent and effective hand hygiene in industrial and commercial environments. It kills 99.9% of germs without the need for water or rinsing, making it ideal for use where hand washing facilities are not always accessible. The formula includes moisturising agents to prevent skin dryness with repeated use. Suitable for food processing, healthcare, warehousing, and public-facing staff."
-        data-uses="Healthcare|Food Processing|Industrial|Retail">
-        <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img src="images/products/hand-sanitizer.jpg" alt="Hand Sanitizer"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-HYG-007</div>
-          <h3 class="product-name">Hand Sanitizer</h3>
-          <p class="product-desc">Fast-acting 70% alcohol sanitizer formulated for frequent industrial use.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">500ml / 5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="hygiene"
-        data-full-desc="NovaChem Hand Soap is a gentle, dermatologically-tested liquid soap enriched with moisturising agents to protect and nourish the skin during frequent washing. Its balanced pH formula effectively removes dirt, bacteria, and light contaminants without stripping the skin's natural oils. The rich lather rinses cleanly and leaves hands feeling soft and refreshed. Suitable for use in washrooms, kitchens, healthcare facilities, offices, and schools where hand hygiene is a priority."
-        data-uses="Household|Healthcare|Commercial|Schools">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-hygiene">Hygiene</span><img src="images/products/hand-soap.jpg" alt="Hand Soap"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-HYG-008</div>
-          <h3 class="product-name">Hand Soap</h3>
-          <p class="product-desc">Gentle, dermatologically-tested liquid soap with moisturizing agents.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="hygiene"
-        data-full-desc="NovaChem Bubble Bath is a luxurious, rich-foaming formula developed with a gentle, skin-friendly surfactant base that produces an abundant lather for a relaxing bathing experience. The formula is pH balanced to be mild on sensitive skin while effectively cleansing and refreshing the body. It is free from harsh irritants and suitable for adults and children alike. Available in bulk for private-label packaging or hospitality supply."
-        data-uses="Household|Hospitality|Retail|Private Label">
-        <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img src="images/products/bubble-bath.jpg" alt="Bubble Bath"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-HYG-009</div>
-          <h3 class="product-name">Bubble Bath</h3>
-          <p class="product-desc">Rich foaming formula with a gentle, skin-friendly surfactant base.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="industrial"
-        data-full-desc="NovaChem Grit Hand Cleaner is an abrasive, heavy-duty hand cleaning paste specifically designed to remove stubborn grease, oil, carbon, tar, paint, and industrial grime from hands without the need for solvents. The natural grit particles provide mechanical scrubbing action while the conditioning agents protect skin from drying out. Used widely in workshops, factories, mines, and garages where workers are exposed to heavy soiling throughout the day."
-        data-uses="Industrial|Automotive|Mining|Workshops">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><img src="images/products/grit-hand-cleaner.jpg" alt="Grit Hand Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-IND-010</div>
-          <h3 class="product-name">Grit Hand Cleaner</h3>
-          <p class="product-desc">Abrasive heavy-duty hand cleaner for removing grease, oil, and grime.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">2kg / 5kg / 25kg</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="NovaChem Handy Andy is a versatile cream cleanser formulated with fine abrasive particles and powerful surfactants that work together to lift stubborn stains, soap scum, and grease from surfaces without scratching. It is effective on porcelain, enamel, stainless steel, ceramic, and most hard plastic surfaces. The thick, creamy consistency clings to vertical surfaces for better contact time. Ideal for kitchen counters, sinks, bathroom fixtures, and stovetops in both domestic and commercial settings."
-        data-uses="Household|Commercial|Hospitality|Food Service">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/handy-andy.jpg" alt="Handy Andy"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-011</div>
-          <h3 class="product-name">Handy Andy</h3>
-          <p class="product-desc">Versatile cream cleanser that lifts stains without scratching surfaces.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="NovaChem Window Cleaner is a streak-free glass and mirror cleaning solution formulated with fast-evaporating solvents that dissolve fingerprints, smudges, dust film, and grime without leaving behind residue or streaks. The formula is safe on tinted glass, mirrors, and chrome surfaces. Simply spray and wipe with a lint-free cloth for a crystal-clear finish. Suitable for offices, retail stores, vehicles, and domestic use."
-        data-uses="Household|Commercial|Automotive|Retail">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/window-cleaner.jpg" alt="Window Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-012</div>
-          <h3 class="product-name">Window Cleaner</h3>
-          <p class="product-desc">Streak-free glass and mirror cleaner with fast-evaporating formula.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="NovaChem Fabric Softener is an industrial-grade textile conditioning solution formulated to soften fabrics, reduce static cling, and impart a long-lasting fresh fragrance to laundry. Its high-active concentration makes it cost-effective for bulk laundry operations such as hotels, hospitals, laundromats, and linen services. The formula is compatible with all washing machine types and works effectively in both cold and warm water wash cycles."
-        data-uses="Hospitality|Healthcare|Laundry Services|Household">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/fabric-softener.jpg" alt="Fabric Softener"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-HYG-013</div>
-          <h3 class="product-name">Fabric Softener</h3>
-          <p class="product-desc">Industrial-grade softener for bulk laundry with a long-lasting fresh scent.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="NovaChem All Purpose Cleaner is a versatile, multi-surface cleaning solution formulated to tackle everyday dirt, grease, and grime on a wide variety of hard surfaces. Safe for use on tiles, countertops, plastic, sealed wood, and painted surfaces, it removes marks and spills quickly without leaving behind residue. The balanced formula is effective both diluted for regular use and at higher concentrations for tougher cleaning tasks in commercial or industrial settings."
-        data-uses="Household|Commercial|Industrial|Schools">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/all-purpose-cleaner.jpg" alt="All Purpose Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-014</div>
-          <h3 class="product-name">All Purpose Cleaner</h3>
-          <p class="product-desc">Multi-surface everyday cleaner safe for tile, counter, and plastic surfaces.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="NovaChem Silicon is a high-gloss silicone-based polish and protectant formulated to restore, shine, and protect a wide range of rubber, vinyl, and plastic surfaces. It repels dust, UV rays, and moisture to extend the life of dashboards, door seals, tyres, and exterior rubber trims. The formula dries to a non-greasy, showroom-quality finish that lasts through multiple washes. Ideal for automotive detailing, fleet maintenance, and vehicle showrooms."
-        data-uses="Automotive|Fleet Management|Car Detailing">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/silicon.jpg" alt="Silicon"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-IND-015</div>
-          <h3 class="product-name">Silicon</h3>
-          <p class="product-desc">High-gloss silicon polish for dashboards, tires, and rubber seals.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">500ml / Tubes</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="<p>Our Alcohol-Based Air Freshener is an excellent, fast-acting fragrance solution designed to instantly eliminate unpleasant odours and refresh indoor spaces with a long-lasting, pleasant scent. Formulated with a high-quality alcohol base, it disperses quickly into the air, leaving behind a clean, fresh fragrance without sticky residue.</p><p>Ideal for use in homes, offices, hotels, restaurants, retail stores, vehicles, gyms and public facilities, it effectively neutralises everyday odours caused by cooking, smoke, pets, bathrooms and general indoor environments. Simply spray a fine mist into the air or toward the centre of the room for an immediate burst of freshness.</p><p><strong>Key Features</strong></p><ul><li>Fast-drying, alcohol-based formula.</li><li>Instantly freshens and deodorises indoor spaces.</li><li>Long-lasting, premium fragrance.</li><li>Effectively neutralises unpleasant odours.</li><li>Leaves no sticky or oily residue.</li><li>Suitable for homes, offices, hotels, vehicles, shops and public spaces.</li><li>Available in a variety of refreshing fragrances.</li><li>Ideal for both domestic and commercial use.</li></ul><p><strong>Important Safety Information</strong></p><p>This product is highly flammable due to its alcohol content. Keep away from heat, sparks, open flames and other sources of ignition. Do not smoke while using this product. Avoid spraying directly into the eyes, onto the face or onto sensitive skin. If contact with eyes occurs, rinse immediately with plenty of clean water and seek medical attention if irritation persists. Do not ingest. If swallowed, seek immediate medical advice. Use only in well-ventilated areas and avoid excessive inhalation of concentrated spray. Keep out of reach of children and pets. Store in the original, tightly sealed container in a cool, dry place away from direct sunlight and temperatures above 40°C. Do not puncture or expose the container to excessive heat. Avoid spraying directly onto polished wood, painted surfaces, leather, silk or other delicate materials without first testing in an inconspicuous area.</p>"
-        data-uses="Commercial|Automotive|Hospitality|Retail">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/air-freshner.jpg" alt="Air Freshner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-016</div>
-          <h3 class="product-name">Air Freshner</h3>
-          <p class="product-desc">Long-lasting aerosol fragrance for offices, vehicles, and washrooms.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="industrial"
-        data-full-desc="NovaChem Pine Disinfect is a hospital-grade pine disinfectant and deodoriser formulated for use in high-risk environments where effective sanitation is critical. The active disinfecting agents kill a broad spectrum of bacteria, fungi, and viruses on hard surfaces, while the pine fragrance leaves areas smelling clean and fresh. Suitable for use on floors, walls, drains, and surfaces in factories, schools, clinics, hospitals, and public washrooms. Compatible with most standard cleaning equipment."
-        data-uses="Healthcare|Industrial|Schools|Commercial">
-        <div class="media-block tone-light"><span class="product-category-tag tag-industrial">Industrial</span><img src="images/products/pine-disinfect.jpg" alt="Pine Disinfect"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-IND-017</div>
-          <h3 class="product-name">Pine Disinfect</h3>
-          <p class="product-desc">Hospital-grade pine disinfectant for factory floors and washrooms.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="NovaChem Oven Cleaner is a heavy-duty caustic foam cleaner engineered to break down the toughest baked-on grease, food residue, and carbon deposits from oven surfaces, grills, and commercial cooking equipment. The expanding foam penetrates and lifts burnt-on deposits, reducing the need for heavy scrubbing. Safe for use on oven interiors, grill pans, extractor filters, and industrial catering equipment. Rinse thoroughly after application."
-        data-uses="Household|Food Service|Catering|Commercial">
-        <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/oven-cleaner.jpg" alt="Oven Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-019</div>
-          <h3 class="product-name">Oven Cleaner</h3>
-          <p class="product-desc">Heavy-duty caustic foam that cuts through baked-on grease and carbon.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="NovaChem Drain Cleaner is a fast-acting, heavy-duty formula designed to dissolve and clear blocked or slow-running drains in domestic, commercial, and industrial settings. The powerful alkaline formula rapidly breaks down grease, hair, soap scum, food waste, and other organic matter that cause drain blockages. Safe for use in sinks, showers, floor drains, and gutters. For severe blockages, a second application may be required. Not suitable for use with aluminium pipework."
-        data-uses="Household|Commercial|Industrial|Food Service">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/drain-cleaner.jpg" alt="Drain Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-020</div>
-          <h3 class="product-name">Drain Cleaner</h3>
-          <p class="product-desc">Fast-acting formula that dissolves grease, hair, and organic blockages.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="<p>This cleaning chemical is an ammonia and solvent based liquid floor stripper. It is designed for the removal of wax polishes and polymer coatings from floors. Due to its high ammonia content this product effectively removes all types of polishes/waxes. Always use this product in well-ventilated areas.</p><p>Mix one part of this floor care product with 5 parts of water depending on the severity of the polymer/wax build up. Spread over the area to be cleaned or stripped, agitate or rub with a mop, brush or broom allowing some time to react. Then rinse with clean water. Dry the surface or leave to dry on its own accord.</p><p><strong>Important Safety Information</strong></p><p>Please ensure that this product is kept out of reach of children. Always wash hands after use and do not ingest. If skin irritation persists, seek medical advice. If product splashes into your eyes, wash with clean, running water for at least 10 minutes. Seek medical advice if irritation persists. If ingested, seek medical attention. Store in a cool, dry place. Keep out of pathways to avoid accidental spillage.</p>"
-        data-uses="Automotive|Industrial|Commercial">
-        <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/product-placeholder.svg" alt="All Strip (Ammonia Polish Stripper)"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-021</div>
-          <h3 class="product-name">All Strip (Ammonia polish stripper)</h3>
-          <p class="product-desc">Placeholder description for a high-performance ammonia-based polish stripper.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="<p>Blacksol is a black fluid and is a dark coloured liquid with a strong phenolic odour that is designed for use in households, public conveniences, mines, industrial organizations and other outlets where efficient cleaning of inanimate objects like drains, rubbish bins,etc. It mixes easily forming a stable emulsion with either hard or soft water. It is non-corrosive and will not damage clothing. This is not classified as a disinfectant but as a deodorizer.</p><p><strong>Usage Instructions</strong></p><ul><li><strong>Heavy Duty:</strong> Mix one part Blacksol with 25 parts of water for very dirty areas.</li><li><strong>Medium Duty:</strong> Mix one part of this industrial cleaning product with 50 parts of water.</li><li><strong>General Cleaning:</strong> Mix one part of Blacksol with 150 parts water.</li></ul><p>This cleaning chemical can be diluted and put in a spray bottle, sprayed onto the surface to be cleaned and then rinsed off.</p>"
-        data-uses="Industrial|Commercial|Automotive">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Blacksol"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-022</div>
-          <h3 class="product-name">Blacksol</h3>
-          <p class="product-desc">Placeholder description for a specialised black-spot and surface treatment product.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="<p>Our Thick Bleach is a powerful, multi-purpose cleaning and disinfecting solution formulated with a thick, clinging consistency that adheres to surfaces for longer-lasting cleaning action. It effectively removes stubborn stains, mould, mildew, soap scum and grime while killing germs and helping to eliminate unpleasant odours. Ideal for use in bathrooms, toilets, kitchens, laundries and other hard, non-porous surfaces.</p><p>The thick formula provides excellent coverage and improved contact time for enhanced cleaning and whitening performance. Suitable for toilets, sinks, basins, tiles, grout, drains and waste bins, it leaves surfaces hygienically clean and fresh. Use as supplied for heavy-duty cleaning or dilute according to the recommended ratio for general cleaning and sanitising. Always rinse food-contact surfaces thoroughly with clean water after use.</p><p><strong>Key Features</strong></p><ul><li>Thick formula clings to surfaces for longer-lasting cleaning action.</li><li>Cleans, disinfects and deodorises in one application.</li><li>Effectively removes stains, mould, mildew and soap scum.</li><li>Whitens and brightens toilets, tiles, grout and other hard surfaces.</li><li>Eliminates unpleasant odours while killing common household germs.</li></ul><p><strong>Important Safety Information</strong></p><p>This product is intended for cleaning and disinfecting hard surfaces only. Do not ingest. Avoid contact with eyes, skin and clothing. Wear protective gloves and ensure adequate ventilation during use. Never mix this product with acids, ammonia or other household cleaning chemicals, as dangerous gases may be released. If the product comes into contact with the eyes, rinse immediately with plenty of clean water for at least 15 minutes and seek medical attention. If it comes into contact with the skin, wash thoroughly with soap and water. If swallowed, do not induce vomiting; drink plenty of water and seek immediate medical advice. Keep out of reach of children and pets. Store upright in the original, tightly closed container in a cool, dry, well-ventilated area away from direct sunlight and heat. Avoid use on aluminium, natural stone, coloured fabrics, wood or any surface not recommended for chlorine bleach.</p>"
-        data-uses="Household|Commercial|Healthcare">
-        <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/product-placeholder.svg" alt="Bleach (Thick)"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-023</div>
-          <h3 class="product-name">Bleach (Thick)</h3>
-          <p class="product-desc">Placeholder description for a thickened bleach formulation designed for durable disinfection.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="<p>This is a detergent acid blend designed for removing excess cement during building operations. This light green liquid can be diluted with water and can be used to remove light lime discoloration from salts, stone, bricks, etc. It can also be used as an etching acidic product and must be handled with care.</p><p>This industrial cleaning chemical cleans very effectively and does not leave a smell behind after cleaning. It is highly acidic. It is non-flammable and mixes easily with water.</p><p><strong>Usage Instructions</strong></p><ul><li>Open the container partially and stand well back. Allow any excess gases to escape.</li><li>For heavy deposits: Mix equal parts of Brick Cleaner and water (1:1). Pour onto the area, agitate with a stiff brush or broom, and rinse well. If results are unsatisfactory, apply undiluted.</li><li>For light stains or lime deposits: Mix 1 part Brick Cleaner to 10 parts water.</li></ul><p><strong>Important Safety Information</strong></p><p>Use this product with great care. Always wear safety eyewear, gloves and appropriate overalls. Brick Cleaner contains acids so it is corrosive to human tissue and fabrics. Should skin contact occur, remove contaminated clothing and rinse affected areas in clean, flowing water for at least ten minutes. If irritation persists, seek medical advice. If eye contact occurs, wash eyes in clean, flowing water and seek medical attention. If ingested, seek medical advice immediately. Keep out of reach of children. Keep out of pathways to avoid accidental spillage.</p>"
-        data-uses="Construction|Commercial|Industrial">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/product-placeholder.svg" alt="Brick Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-024</div>
-          <h3 class="product-name">Brick Cleaner</h3>
-          <p class="product-desc">Placeholder description for a cleaner formulated for brick and masonry surfaces.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Car Shampoo High-Foam. Detailed automotive wash performance information and dilution ratios will follow."
-        data-uses="Automotive|Fleet Management|Car Wash">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Car Shampoo High-Foam"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-025</div>
-          <h3 class="product-name">Car Shampoo High-Foam</h3>
-          <p class="product-desc">Placeholder description for a rich-foaming automotive shampoo for thorough vehicle washing.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Car Shampoo Snow Foam. Full product benefits and vehicle-safe usage guidance will be added soon."
-        data-uses="Automotive|Fleet Management|Car Wash">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Car Shampoo Snow Foam"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-026</div>
-          <h3 class="product-name">Car Shampoo Snow Foam</h3>
-          <p class="product-desc">Placeholder description for a snow-foam wash solution that lifts dirt safely from paintwork.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Touchless Car Shampoo with Wax. Detailed performance claims and application methods will be supplied later."
-        data-uses="Automotive|Car Wash|Fleet Management">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Touchless Car Shampoo with Wax"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-027</div>
-          <h3 class="product-name">Touchless Car Shampoo with Wax</h3>
-          <p class="product-desc">Placeholder description for a contactless wash product with wax-enhancing protection.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Colour Foam Car Shampoo with Wax. Technical formulation notes and colour-foam performance details will be added soon."
-        data-uses="Automotive|Car Wash|Fleet Management">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Colour Foam Car Shampoo with Wax"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-028</div>
-          <h3 class="product-name">Colour Foam Car Shampoo with Wax</h3>
-          <p class="product-desc">Placeholder description for a colour-enhanced foam wash with wax protection.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Carpet Spot Remover. Full stain-removal performance and fabric safety information will be added later."
-        data-uses="Household|Commercial|Hospitality">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Carpet Spot Remover"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-029</div>
-          <h3 class="product-name">Carpet Spot Remover</h3>
-          <p class="product-desc">Placeholder description for a spot treatment product for upholstery and carpet stains.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="cleaners"
-        data-full-desc="Placeholder product description for Citriclean. Detailed technical data and application guidance will be added soon."
-        data-uses="Household|Commercial|Industrial">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img src="images/products/product-placeholder.svg" alt="Citriclean"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-CLN-030</div>
-          <h3 class="product-name">Citriclean</h3>
-          <p class="product-desc">Placeholder description for a citrus-based cleaner with strong degreasing action.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Dishwashing Liquid Anti-Bacterial. Final formulation details and usage guidance will be added later."
-        data-uses="Household|Commercial|Food Service">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Dishwashing Liquid Anti-Bacterial"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-031</div>
-          <h3 class="product-name">Dishwashing Liquid Anti-Bacterial</h3>
-          <p class="product-desc">Placeholder description for an antibacterial dishwashing liquid with grease-cutting action.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">750ml / 5L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="industrial"
-        data-full-desc="Placeholder product description for Waterless Hand Cleaner (Grit). Full heavy-duty usage guidance will be provided soon."
-        data-uses="Industrial|Automotive|Mining|Workshops">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><img src="images/products/product-placeholder.svg" alt="Waterless Hand Cleaner (Grit)"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-IND-032</div>
-          <h3 class="product-name">Waterless Hand Cleaner (Grit)</h3>
-          <p class="product-desc">Placeholder description for a waterless, grit-based hand cleaner for heavy soiling.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">2kg / 5kg</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="hygiene"
-        data-full-desc="Placeholder product description for Hand Soap (Anti-Bacterial). Full hygiene and skin-care details will be added shortly."
-        data-uses="Household|Healthcare|Commercial|Schools">
-        <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img src="images/products/product-placeholder.svg" alt="Hand Soap (Anti-Bacterial)"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-HYG-033</div>
-          <h3 class="product-name">Hand Soap (Anti-Bacterial)</h3>
-          <p class="product-desc">Placeholder description for an antibacterial hand soap with moisturising properties.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Handy Andy (HAC). Final usage recommendations and formulation notes will be added later."
-        data-uses="Household|Commercial|Hospitality">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Handy Andy (HAC)"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-034</div>
-          <h3 class="product-name">Handy Andy (HAC)</h3>
-          <p class="product-desc">Placeholder description for a HAC-formulated cream cleaner for heavy-duty household and commercial use.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Laundry Liquid. Additional performance details and wash guidance will be added soon."
-        data-uses="Household|Commercial|Laundry Services">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Laundry Liquid"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-035</div>
-          <h3 class="product-name">Laundry Liquid</h3>
-          <p class="product-desc">Placeholder description for a concentrated laundry liquid for everyday fabric care.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="specialty"
-        data-full-desc="Placeholder product description for Car Interior Cleaner. Final surface-safety information and application notes will be added later."
-        data-uses="Automotive|Fleet Management|Car Detailing">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/product-placeholder.svg" alt="Car Interior Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-SPC-036</div>
-          <h3 class="product-name">Car Interior Cleaner</h3>
-          <p class="product-desc">Placeholder description for a cleaner made for dashboards, plastics, and upholstery interiors.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="hygiene"
-        data-full-desc="Placeholder product description for Shower Shampoo. Full body-wash and bathroom usage details will be added soon."
-        data-uses="Household|Hospitality|Healthcare">
-        <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img src="images/products/product-placeholder.svg" alt="Shower Shampoo"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-HYG-037</div>
-          <h3 class="product-name">Shower Shampoo</h3>
-          <p class="product-desc">Placeholder description for a shower shampoo formulated for everyday hygiene and rinsing comfort.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">5L / 25L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="equipment"
-        data-full-desc="Placeholder product description for High Pressure Washer Gun. Detailed performance specs and attachments will be added soon."
-        data-uses="Cleaning|Automotive|Industrial">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Equipment</span><img src="images/products/product-placeholder.svg" alt="High Pressure Washer Gun"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-EQP-001</div>
-          <h3 class="product-name">High Pressure Washer Gun</h3>
-          <p class="product-desc">Placeholder description for a durable pressure washer gun for heavy-duty cleaning tasks.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">Standard / Pro</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="equipment"
-        data-full-desc="Placeholder product description for Foam Cannon. Full foam coverage details and compatibility information will be added soon."
-        data-uses="Automotive|Car Wash|Commercial">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Equipment</span><img src="images/products/product-placeholder.svg" alt="Foam Cannon"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-EQP-002</div>
-          <h3 class="product-name">Foam Cannon</h3>
-          <p class="product-desc">Placeholder description for a foam cannon designed for thick, even foam application.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">1L / 2L</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="equipment"
-        data-full-desc="Placeholder product description for High Pressure Washer. Technical specifications and pressure ratings will be added soon."
-        data-uses="Industrial|Commercial|Automotive">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Equipment</span><img src="images/products/product-placeholder.svg" alt="High Pressure Washer"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-EQP-003</div>
-          <h3 class="product-name">High Pressure Washer</h3>
-          <p class="product-desc">Placeholder description for a high-performance pressure washer for deep cleaning tasks.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">140Bar / 180Bar</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="equipment"
-        data-full-desc="Placeholder product description for Vacuum Cleaner. Full suction and filtration details will be added soon."
-        data-uses="Commercial|Industrial|Hospitality">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Equipment</span><img src="images/products/product-placeholder.svg" alt="Vacuum Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-EQP-004</div>
-          <h3 class="product-name">Vacuum Cleaner</h3>
-          <p class="product-desc">Placeholder description for a powerful vacuum cleaner for dry and wet cleaning applications.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">Compact / Industrial</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="equipment"
-        data-full-desc="Placeholder product description for Steam Cleaner. Additional heating and sanitation information will be added soon."
-        data-uses="Hospitality|Healthcare|Industrial">
-        <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Equipment</span><img src="images/products/product-placeholder.svg" alt="Steam Cleaner"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-EQP-005</div>
-          <h3 class="product-name">Steam Cleaner</h3>
-          <p class="product-desc">Placeholder description for a steam cleaner designed for sanitising and deep cleaning.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">Portable / Professional</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-      <article class="product-card" data-category="equipment"
-        data-full-desc="Placeholder product description for Air Blow Gun. Full airflow and pressure details will be added soon."
-        data-uses="Industrial|Automotive|Workshops">
-        <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Equipment</span><img src="images/products/product-placeholder.svg" alt="Air Blow Gun"></div>
-        <div class="product-card-body">
-          <div class="product-sku">SKU: NC-EQP-006</div>
-          <h3 class="product-name">Air Blow Gun</h3>
-          <p class="product-desc">Placeholder description for an air blow gun used for drying and debris removal.</p>
-          <div class="product-card-footer">
-            <span class="product-sizes">Standard / Heavy Duty</span>
-            <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z"/></svg></span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-
-    <div class="catalogue-cta">
-      <div>
-        <span class="eyebrow">Request a Technical Data Sheet (SDS)</span>
-        <p class="body-md">All NovaChem products are manufactured under strict laboratory conditions. We provide comprehensive safety documentation for compliance with industrial health and safety standards.</p>
-        
-      </div>
-      <div class="assurance-box">
-        <span class="label-caps" style="color:rgba(255,255,255,0.6);">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px; margin-right:6px;"><path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"/></svg>
-          Quality Assurance Certified
+        <span class="result-count">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+          </svg>
+          37 Products
         </span>
-        <ul>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> ISO 9001:2015 Compliant</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Biodegradable Formulations</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> High-Active Concentration</li>
-        </ul>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section class="section section-light" style="padding-top:24px;">
+    <div class="container">
 
-<!-- Product Detail Modal -->
-<div class="product-modal-overlay" id="productModalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
-  <div class="product-modal-panel" id="productModalPanel">
-    <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close product details">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-    </button>
-    <div class="modal-image-wrap">
-      <img id="modalImage" src="" alt="">
-      <span class="modal-category-tag" id="modalCategoryTag"></span>
-    </div>
-    <div class="modal-content-wrap">
-      <div class="modal-meta">
-        <span class="product-sku" id="modalSku"></span>
-        <span class="modal-sizes" id="modalSizes"></span>
-      </div>
-      <h2 class="modal-product-name" id="modalProductName"></h2>
-      <p class="modal-short-desc" id="modalShortDesc"></p>
-      <div class="modal-divider"></div>
-      <div class="modal-full-desc-wrap">
-        <p class="modal-full-desc" id="modalFullDesc"></p>
-        <button class="modal-show-more-btn" id="modalShowMoreBtn" type="button">Show more</button>
-      </div>
-      <div class="modal-uses" id="modalUsesWrap">
-        <div class="modal-uses-label">Suitable For</div>
-        <div class="modal-uses-tags" id="modalUsesTags"></div>
-      </div>
-      <button class="modal-enquire-btn" id="modalEnquireBtn">Enquire About This Product</button>
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <h4>NovaChem</h4>
-        <p>Industrial chemical excellence delivered across South Africa. Precision in every drop.</p>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/novachem_innovations/" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg></a>
-          <a href="https://www.tiktok.com/@novachem_innovations?_r=1&_t=ZS-97QQPEQfLev" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16.5 3c.4 2.1 1.9 3.7 4 4v3.1c-1.5 0-2.9-.4-4-1.2v6.6a5.5 5.5 0 11-5.5-5.5c.3 0 .6 0 .9.1v3.1a2.4 2.4 0 102 2.4V3h2.6z"/></svg></a>
-
+      <div class="catalogue-toolbar">
+        <div class="filter-row">
+          <button class="filter-chip active" data-filter="all">All Products</button>
+          <button class="filter-chip" data-filter="cleaners">Cleaners</button>
+          <button class="filter-chip" data-filter="industrial">Industrial</button>
+          <button class="filter-chip" data-filter="hygiene">Hygiene</button>
+          <button class="filter-chip" data-filter="specialty">Specialty</button>
+          <button class="filter-chip" data-filter="equipment">Equipment</button>
+        </div>
+        <div class="catalogue-controls">
+          <input type="search" class="catalogue-search" placeholder="Search products, SKU or description"
+            aria-label="Search products">
+          <select class="sort-select">
+            <option value="asc" selected>Sort by Name (A-Z)</option>
+            <option value="desc">Sort by Name (Z-A)</option>
+          </select>
         </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Navigation</div>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="catalogue.html">Catalogue</a></li>
-          <li><a href="about.html">About Us</a></li>
-        </ul>
+
+      <div class="product-grid">
+
+        <!-- Cleaners -->
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="NovaChem Tile Cleaner is a high-concentration acid-based formula designed for deep cleaning of ceramic, porcelain, and natural stone tiles. It effectively dissolves mineral deposits, limescale, soap scum, and heavy grout staining without damaging tile surfaces. Ideal for bathrooms, kitchens, industrial washrooms, and commercial food preparation areas. Dilute with water for regular maintenance or apply at full strength for deep-clean applications."
+          data-uses="Household|Commercial|Industrial">
+          <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/tile-cleaner.jpg" alt="Tile Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-001</div>
+            <h3 class="product-name">Tile Cleaner</h3>
+            <p class="product-desc">High-concentration acid-based cleaner for heavy-duty tile and grout maintenance.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="NovaChem Dishwashing Liquid is a premium grease-cutting formula enriched with surfactants that break down tough food residue, oils, and fats quickly and efficiently. Its gentle yet powerful formulation is safe on hands during prolonged use and produces a rich, lasting lather even in hard water conditions. Suitable for hand-washing dishes, pots, and utensils in both household kitchens and high-volume commercial kitchens and canteens."
+          data-uses="Household|Commercial|Food Service">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img src="images/products/dish-washing-liquid.jpg
+          " alt="Dish washing liquid"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-002</div>
+            <h3 class="product-name">Dish washing liquid</h3>
+            <p class="product-desc">Premium grease-cutting formula for commercial and residential kitchens.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">750ml / 5L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="NovaChem Car Shampoo is a pH-neutral automotive wash solution specially formulated to clean vehicle bodywork without stripping wax or protective coatings. Its lubricating formula lifts dirt and grime safely away from painted surfaces, preventing swirl marks and micro-scratches during the wash process. Contains built-in wax protection agents that add a subtle shine to the finish. Ideal for fleet washing, car wash bays, and everyday vehicle maintenance."
+          data-uses="Automotive|Fleet Management|Car Wash">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/car-shampoo.jpg" alt="Car Shampoo"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-003</div>
+            <h3 class="product-name">Car Shampoo</h3>
+            <p class="product-desc">pH-neutral automotive wash with wax protection for industrial fleets.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="industrial"
+          data-full-desc="NovaChem Multi Purpose Degreaser is a powerful solvent-based cleaning agent formulated to cut through heavy grease, oil, hydraulic fluid, and carbon deposits on a wide range of surfaces. It is designed for use in workshops, factories, garages, and industrial plants where heavy contamination is a daily challenge. Safe on metal, concrete, and most painted surfaces when used as directed. Available in concentrated form for economical dilution or ready-to-use for spot applications."
+          data-uses="Industrial|Automotive|Workshops|Manufacturing">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><img
+              src="images/products/multi-purpose-degreaser.jpg" alt="Multi Purpose Degreaser"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-IND-004</div>
+            <h3 class="product-name">Multi Purpose Degreaser</h3>
+            <p class="product-desc">Powerful solvent-based degreaser for workshop floors and machinery.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L </span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="<p>Regular bleach has a chlorine content of 5% and is stronger than the normal bleach sold in shops and supermarkets. Not only does it bleach, it also disinfects, deodorizes and sanitizes. It should only be used on cottons, linens, whites and fast colours. If in any doubt, please do a test on a small piece of the material first. With this cleaning product you would only need to use half the normal amount of bleach because our bleach is so concentrated.</p><p><strong>Usage Instructions</strong></p><ul><li><strong>Whiter Wash:</strong> Mix 15 ml of bleach to 5 litres of water. Add laundry and soak for 15 minutes. Wash thoroughly. (White fabrics only).</li><li><strong>Stubborn Stains:</strong> Soak item in warm water for 10 mins, then soak in 100 ml bleach to 5 litres cold water for 10-20 mins. Wash thoroughly.</li><li><strong>Disinfect &amp; Deodorize:</strong> Mix 100 ml of bleach with 5 litres of warm water. Wash item, leave in mixture for 5 mins, and rinse thoroughly.</li></ul><p><strong>Important Safety &amp; Handling</strong></p><p>Always check clothing labels. Do not use on waffle cloth, pique, rayon, satin and wool. Keep out of reach of children. Wear safety eyewear, rubber gloves and suitable overalls. Always wash hands after use and do not ingest. If skin irritation persists, seek medical advice. If product splashes into your eyes, wash with clean, running water for at least 10 minutes and seek medical advice. If ingested, seek medical attention. Store in a cool, dry place.</p>"
+          data-uses="Household|Commercial|Healthcare|Food Processing">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/bleach.jpg" alt="Bleach"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-005</div>
+            <h3 class="product-name">Bleach</h3>
+            <p class="product-desc">High-strength sodium hypochlorite for disinfecting and whitening surfaces.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="NovaChem Pine Gel is a thick, concentrated pine-scented gel cleaner that combines powerful cleaning action with a long-lasting fresh fragrance. The viscous formula clings to surfaces for extended contact time, ensuring thorough disinfection and deodorisation of floors, bathrooms, and drains. It is effective against a broad spectrum of bacteria and leaves a refreshing pine scent that neutralises unpleasant odours. Ideal for schools, offices, shopping centres, hospitals, and domestic use."
+          data-uses="Household|Commercial|Healthcare|Schools">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/pine-gel.jpg" alt="Pine Gel"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-006</div>
+            <h3 class="product-name">Pine Gel</h3>
+            <p class="product-desc">Concentrated pine-scented gel cleaner with long-lasting fragrance release.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">2kg / 5kg / 25kg</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="hygiene"
+          data-full-desc="NovaChem Hand Sanitizer is a fast-acting, 70% alcohol-based sanitizing solution formulated for frequent and effective hand hygiene in industrial and commercial environments. It kills 99.9% of germs without the need for water or rinsing, making it ideal for use where hand washing facilities are not always accessible. The formula includes moisturising agents to prevent skin dryness with repeated use. Suitable for food processing, healthcare, warehousing, and public-facing staff."
+          data-uses="Healthcare|Food Processing|Industrial|Retail">
+          <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img
+              src="images/products/hand-sanitizer.jpg" alt="Hand Sanitizer"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-HYG-007</div>
+            <h3 class="product-name">Hand Sanitizer</h3>
+            <p class="product-desc">Fast-acting 70% alcohol sanitizer formulated for frequent industrial use.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">500ml / 5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="hygiene"
+          data-full-desc="NovaChem Hand Soap is a gentle, dermatologically-tested liquid soap enriched with moisturising agents to protect and nourish the skin during frequent washing. Its balanced pH formula effectively removes dirt, bacteria, and light contaminants without stripping the skin's natural oils. The rich lather rinses cleanly and leaves hands feeling soft and refreshed. Suitable for use in washrooms, kitchens, healthcare facilities, offices, and schools where hand hygiene is a priority."
+          data-uses="Household|Healthcare|Commercial|Schools">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-hygiene">Hygiene</span><img
+              src="images/products/hand-soap.jpg" alt="Hand Soap"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-HYG-008</div>
+            <h3 class="product-name">Hand Soap</h3>
+            <p class="product-desc">Gentle, dermatologically-tested liquid soap with moisturizing agents.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="hygiene"
+          data-full-desc="NovaChem Bubble Bath is a luxurious, rich-foaming formula developed with a gentle, skin-friendly surfactant base that produces an abundant lather for a relaxing bathing experience. The formula is pH balanced to be mild on sensitive skin while effectively cleansing and refreshing the body. It is free from harsh irritants and suitable for adults and children alike. Available in bulk for private-label packaging or hospitality supply."
+          data-uses="Household|Hospitality|Retail|Private Label">
+          <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img
+              src="images/products/bubble-bath.jpg" alt="Bubble Bath"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-HYG-009</div>
+            <h3 class="product-name">Bubble Bath</h3>
+            <p class="product-desc">Rich foaming formula with a gentle, skin-friendly surfactant base.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="industrial"
+          data-full-desc="NovaChem Grit Hand Cleaner is an abrasive, heavy-duty hand cleaning paste specifically designed to remove stubborn grease, oil, carbon, tar, paint, and industrial grime from hands without the need for solvents. The natural grit particles provide mechanical scrubbing action while the conditioning agents protect skin from drying out. Used widely in workshops, factories, mines, and garages where workers are exposed to heavy soiling throughout the day."
+          data-uses="Industrial|Automotive|Mining|Workshops">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><img
+              src="images/products/grit-hand-cleaner.jpg" alt="Grit Hand Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-IND-010</div>
+            <h3 class="product-name">Grit Hand Cleaner</h3>
+            <p class="product-desc">Abrasive heavy-duty hand cleaner for removing grease, oil, and grime.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">2kg / 5kg / 25kg</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="NovaChem Handy Andy is a versatile cream cleanser formulated with fine abrasive particles and powerful surfactants that work together to lift stubborn stains, soap scum, and grease from surfaces without scratching. It is effective on porcelain, enamel, stainless steel, ceramic, and most hard plastic surfaces. The thick, creamy consistency clings to vertical surfaces for better contact time. Ideal for kitchen counters, sinks, bathroom fixtures, and stovetops in both domestic and commercial settings."
+          data-uses="Household|Commercial|Hospitality|Food Service">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/handy-andy.jpg" alt="Handy Andy"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-011</div>
+            <h3 class="product-name">Handy Andy</h3>
+            <p class="product-desc">Versatile cream cleanser that lifts stains without scratching surfaces.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="NovaChem Window Cleaner is a streak-free glass and mirror cleaning solution formulated with fast-evaporating solvents that dissolve fingerprints, smudges, dust film, and grime without leaving behind residue or streaks. The formula is safe on tinted glass, mirrors, and chrome surfaces. Simply spray and wipe with a lint-free cloth for a crystal-clear finish. Suitable for offices, retail stores, vehicles, and domestic use."
+          data-uses="Household|Commercial|Automotive|Retail">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/window-cleaner.jpg" alt="Window Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-012</div>
+            <h3 class="product-name">Window Cleaner</h3>
+            <p class="product-desc">Streak-free glass and mirror cleaner with fast-evaporating formula.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="NovaChem Fabric Softener is an industrial-grade textile conditioning solution formulated to soften fabrics, reduce static cling, and impart a long-lasting fresh fragrance to laundry. Its high-active concentration makes it cost-effective for bulk laundry operations such as hotels, hospitals, laundromats, and linen services. The formula is compatible with all washing machine types and works effectively in both cold and warm water wash cycles."
+          data-uses="Hospitality|Healthcare|Laundry Services|Household">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/fabric-softener.jpg" alt="Fabric Softener"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-HYG-013</div>
+            <h3 class="product-name">Fabric Softener</h3>
+            <p class="product-desc">Industrial-grade softener for bulk laundry with a long-lasting fresh scent.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="NovaChem All Purpose Cleaner is a versatile, multi-surface cleaning solution formulated to tackle everyday dirt, grease, and grime on a wide variety of hard surfaces. Safe for use on tiles, countertops, plastic, sealed wood, and painted surfaces, it removes marks and spills quickly without leaving behind residue. The balanced formula is effective both diluted for regular use and at higher concentrations for tougher cleaning tasks in commercial or industrial settings."
+          data-uses="Household|Commercial|Industrial|Schools">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/all-purpose-cleaner.jpg" alt="All Purpose Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-014</div>
+            <h3 class="product-name">All Purpose Cleaner</h3>
+            <p class="product-desc">Multi-surface everyday cleaner safe for tile, counter, and plastic surfaces.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="NovaChem Silicon is a high-gloss silicone-based polish and protectant formulated to restore, shine, and protect a wide range of rubber, vinyl, and plastic surfaces. It repels dust, UV rays, and moisture to extend the life of dashboards, door seals, tyres, and exterior rubber trims. The formula dries to a non-greasy, showroom-quality finish that lasts through multiple washes. Ideal for automotive detailing, fleet maintenance, and vehicle showrooms."
+          data-uses="Automotive|Fleet Management|Car Detailing">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/silicon.jpg" alt="Silicon"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-IND-015</div>
+            <h3 class="product-name">Silicon</h3>
+            <p class="product-desc">High-gloss silicon polish for dashboards, tires, and rubber seals.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">500ml / Tubes</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="<p>Our Alcohol-Based Air Freshener is an excellent, fast-acting fragrance solution designed to instantly eliminate unpleasant odours and refresh indoor spaces with a long-lasting, pleasant scent. Formulated with a high-quality alcohol base, it disperses quickly into the air, leaving behind a clean, fresh fragrance without sticky residue.</p><p>Ideal for use in homes, offices, hotels, restaurants, retail stores, vehicles, gyms and public facilities, it effectively neutralises everyday odours caused by cooking, smoke, pets, bathrooms and general indoor environments. Simply spray a fine mist into the air or toward the centre of the room for an immediate burst of freshness.</p><p><strong>Key Features</strong></p><ul><li>Fast-drying, alcohol-based formula.</li><li>Instantly freshens and deodorises indoor spaces.</li><li>Long-lasting, premium fragrance.</li><li>Effectively neutralises unpleasant odours.</li><li>Leaves no sticky or oily residue.</li><li>Suitable for homes, offices, hotels, vehicles, shops and public spaces.</li><li>Available in a variety of refreshing fragrances.</li><li>Ideal for both domestic and commercial use.</li></ul><p><strong>Important Safety Information</strong></p><p>This product is highly flammable due to its alcohol content. Keep away from heat, sparks, open flames and other sources of ignition. Do not smoke while using this product. Avoid spraying directly into the eyes, onto the face or onto sensitive skin. If contact with eyes occurs, rinse immediately with plenty of clean water and seek medical attention if irritation persists. Do not ingest. If swallowed, seek immediate medical advice. Use only in well-ventilated areas and avoid excessive inhalation of concentrated spray. Keep out of reach of children and pets. Store in the original, tightly sealed container in a cool, dry place away from direct sunlight and temperatures above 40°C. Do not puncture or expose the container to excessive heat. Avoid spraying directly onto polished wood, painted surfaces, leather, silk or other delicate materials without first testing in an inconspicuous area.</p>"
+          data-uses="Commercial|Automotive|Hospitality|Retail">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/air-freshner.jpg" alt="Air Freshner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-016</div>
+            <h3 class="product-name">Air Freshner</h3>
+            <p class="product-desc">Long-lasting aerosol fragrance for offices, vehicles, and washrooms.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="industrial"
+          data-full-desc="NovaChem Pine Disinfect is a hospital-grade pine disinfectant and deodoriser formulated for use in high-risk environments where effective sanitation is critical. The active disinfecting agents kill a broad spectrum of bacteria, fungi, and viruses on hard surfaces, while the pine fragrance leaves areas smelling clean and fresh. Suitable for use on floors, walls, drains, and surfaces in factories, schools, clinics, hospitals, and public washrooms. Compatible with most standard cleaning equipment."
+          data-uses="Healthcare|Industrial|Schools|Commercial">
+          <div class="media-block tone-light"><span class="product-category-tag tag-industrial">Industrial</span><img
+              src="images/products/pine-disinfect.jpg" alt="Pine Disinfect"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-IND-017</div>
+            <h3 class="product-name">Pine Disinfect</h3>
+            <p class="product-desc">Hospital-grade pine disinfectant for factory floors and washrooms.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="NovaChem Oven Cleaner is a heavy-duty caustic foam cleaner engineered to break down the toughest baked-on grease, food residue, and carbon deposits from oven surfaces, grills, and commercial cooking equipment. The expanding foam penetrates and lifts burnt-on deposits, reducing the need for heavy scrubbing. Safe for use on oven interiors, grill pans, extractor filters, and industrial catering equipment. Rinse thoroughly after application."
+          data-uses="Household|Food Service|Catering|Commercial">
+          <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/oven-cleaner.jpg" alt="Oven Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-019</div>
+            <h3 class="product-name">Oven Cleaner</h3>
+            <p class="product-desc">Heavy-duty caustic foam that cuts through baked-on grease and carbon.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="NovaChem Drain Cleaner is a fast-acting, heavy-duty formula designed to dissolve and clear blocked or slow-running drains in domestic, commercial, and industrial settings. The powerful alkaline formula rapidly breaks down grease, hair, soap scum, food waste, and other organic matter that cause drain blockages. Safe for use in sinks, showers, floor drains, and gutters. For severe blockages, a second application may be required. Not suitable for use with aluminium pipework."
+          data-uses="Household|Commercial|Industrial|Food Service">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/drain-cleaner.jpg" alt="Drain Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-020</div>
+            <h3 class="product-name">Drain Cleaner</h3>
+            <p class="product-desc">Fast-acting formula that dissolves grease, hair, and organic blockages.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="<p>This cleaning chemical is an ammonia and solvent based liquid floor stripper. It is designed for the removal of wax polishes and polymer coatings from floors. Due to its high ammonia content this product effectively removes all types of polishes/waxes. Always use this product in well-ventilated areas.</p><p>Mix one part of this floor care product with 5 parts of water depending on the severity of the polymer/wax build up. Spread over the area to be cleaned or stripped, agitate or rub with a mop, brush or broom allowing some time to react. Then rinse with clean water. Dry the surface or leave to dry on its own accord.</p><p><strong>Important Safety Information</strong></p><p>Please ensure that this product is kept out of reach of children. Always wash hands after use and do not ingest. If skin irritation persists, seek medical advice. If product splashes into your eyes, wash with clean, running water for at least 10 minutes. Seek medical advice if irritation persists. If ingested, seek medical attention. Store in a cool, dry place. Keep out of pathways to avoid accidental spillage.</p>"
+          data-uses="Automotive|Industrial|Commercial">
+          <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/product-placeholder.svg" alt="All Strip (Ammonia Polish Stripper)"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-021</div>
+            <h3 class="product-name">All Strip (Ammonia polish stripper)</h3>
+            <p class="product-desc">Placeholder description for a high-performance ammonia-based polish stripper.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="<p>Blacksol is a black fluid and is a dark coloured liquid with a strong phenolic odour that is designed for use in households, public conveniences, mines, industrial organizations and other outlets where efficient cleaning of inanimate objects like drains, rubbish bins,etc. It mixes easily forming a stable emulsion with either hard or soft water. It is non-corrosive and will not damage clothing. This is not classified as a disinfectant but as a deodorizer.</p><p><strong>Usage Instructions</strong></p><ul><li><strong>Heavy Duty:</strong> Mix one part Blacksol with 25 parts of water for very dirty areas.</li><li><strong>Medium Duty:</strong> Mix one part of this industrial cleaning product with 50 parts of water.</li><li><strong>General Cleaning:</strong> Mix one part of Blacksol with 150 parts water.</li></ul><p>This cleaning chemical can be diluted and put in a spray bottle, sprayed onto the surface to be cleaned and then rinsed off.</p>"
+          data-uses="Industrial|Commercial|Automotive">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Blacksol"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-022</div>
+            <h3 class="product-name">Blacksol</h3>
+            <p class="product-desc">Placeholder description for a specialised black-spot and surface treatment product.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="<p>Our Thick Bleach is a powerful, multi-purpose cleaning and disinfecting solution formulated with a thick, clinging consistency that adheres to surfaces for longer-lasting cleaning action. It effectively removes stubborn stains, mould, mildew, soap scum and grime while killing germs and helping to eliminate unpleasant odours. Ideal for use in bathrooms, toilets, kitchens, laundries and other hard, non-porous surfaces.</p><p>The thick formula provides excellent coverage and improved contact time for enhanced cleaning and whitening performance. Suitable for toilets, sinks, basins, tiles, grout, drains and waste bins, it leaves surfaces hygienically clean and fresh. Use as supplied for heavy-duty cleaning or dilute according to the recommended ratio for general cleaning and sanitising. Always rinse food-contact surfaces thoroughly with clean water after use.</p><p><strong>Key Features</strong></p><ul><li>Thick formula clings to surfaces for longer-lasting cleaning action.</li><li>Cleans, disinfects and deodorises in one application.</li><li>Effectively removes stains, mould, mildew and soap scum.</li><li>Whitens and brightens toilets, tiles, grout and other hard surfaces.</li><li>Eliminates unpleasant odours while killing common household germs.</li></ul><p><strong>Important Safety Information</strong></p><p>This product is intended for cleaning and disinfecting hard surfaces only. Do not ingest. Avoid contact with eyes, skin and clothing. Wear protective gloves and ensure adequate ventilation during use. Never mix this product with acids, ammonia or other household cleaning chemicals, as dangerous gases may be released. If the product comes into contact with the eyes, rinse immediately with plenty of clean water for at least 15 minutes and seek medical attention. If it comes into contact with the skin, wash thoroughly with soap and water. If swallowed, do not induce vomiting; drink plenty of water and seek immediate medical advice. Keep out of reach of children and pets. Store upright in the original, tightly closed container in a cool, dry, well-ventilated area away from direct sunlight and heat. Avoid use on aluminium, natural stone, coloured fabrics, wood or any surface not recommended for chlorine bleach.</p>"
+          data-uses="Household|Commercial|Healthcare">
+          <div class="media-block tone-light"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/product-placeholder.svg" alt="Bleach (Thick)"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-023</div>
+            <h3 class="product-name">Bleach (Thick)</h3>
+            <p class="product-desc">Placeholder description for a thickened bleach formulation designed for durable
+              disinfection.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="<p>This is a detergent acid blend designed for removing excess cement during building operations. This light green liquid can be diluted with water and can be used to remove light lime discoloration from salts, stone, bricks, etc. It can also be used as an etching acidic product and must be handled with care.</p><p>This industrial cleaning chemical cleans very effectively and does not leave a smell behind after cleaning. It is highly acidic. It is non-flammable and mixes easily with water.</p><p><strong>Usage Instructions</strong></p><ul><li>Open the container partially and stand well back. Allow any excess gases to escape.</li><li>For heavy deposits: Mix equal parts of Brick Cleaner and water (1:1). Pour onto the area, agitate with a stiff brush or broom, and rinse well. If results are unsatisfactory, apply undiluted.</li><li>For light stains or lime deposits: Mix 1 part Brick Cleaner to 10 parts water.</li></ul><p><strong>Important Safety Information</strong></p><p>Use this product with great care. Always wear safety eyewear, gloves and appropriate overalls. Brick Cleaner contains acids so it is corrosive to human tissue and fabrics. Should skin contact occur, remove contaminated clothing and rinse affected areas in clean, flowing water for at least ten minutes. If irritation persists, seek medical advice. If eye contact occurs, wash eyes in clean, flowing water and seek medical attention. If ingested, seek medical advice immediately. Keep out of reach of children. Keep out of pathways to avoid accidental spillage.</p>"
+          data-uses="Construction|Commercial|Industrial">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/product-placeholder.svg" alt="Brick Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-024</div>
+            <h3 class="product-name">Brick Cleaner</h3>
+            <p class="product-desc">Placeholder description for a cleaner formulated for brick and masonry surfaces.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Car Shampoo High-Foam. Detailed automotive wash performance information and dilution ratios will follow."
+          data-uses="Automotive|Fleet Management|Car Wash">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Car Shampoo High-Foam"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-025</div>
+            <h3 class="product-name">Car Shampoo High-Foam</h3>
+            <p class="product-desc">Placeholder description for a rich-foaming automotive shampoo for thorough vehicle
+              washing.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Car Shampoo Snow Foam. Full product benefits and vehicle-safe usage guidance will be added soon."
+          data-uses="Automotive|Fleet Management|Car Wash">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Car Shampoo Snow Foam"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-026</div>
+            <h3 class="product-name">Car Shampoo Snow Foam</h3>
+            <p class="product-desc">Placeholder description for a snow-foam wash solution that lifts dirt safely from
+              paintwork.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Touchless Car Shampoo with Wax. Detailed performance claims and application methods will be supplied later."
+          data-uses="Automotive|Car Wash|Fleet Management">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Touchless Car Shampoo with Wax"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-027</div>
+            <h3 class="product-name">Touchless Car Shampoo with Wax</h3>
+            <p class="product-desc">Placeholder description for a contactless wash product with wax-enhancing
+              protection.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Colour Foam Car Shampoo with Wax. Technical formulation notes and colour-foam performance details will be added soon."
+          data-uses="Automotive|Car Wash|Fleet Management">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Colour Foam Car Shampoo with Wax"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-028</div>
+            <h3 class="product-name">Colour Foam Car Shampoo with Wax</h3>
+            <p class="product-desc">Placeholder description for a colour-enhanced foam wash with wax protection.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Carpet Spot Remover. Full stain-removal performance and fabric safety information will be added later."
+          data-uses="Household|Commercial|Hospitality">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Carpet Spot Remover"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-029</div>
+            <h3 class="product-name">Carpet Spot Remover</h3>
+            <p class="product-desc">Placeholder description for a spot treatment product for upholstery and carpet
+              stains.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="cleaners"
+          data-full-desc="Placeholder product description for Citriclean. Detailed technical data and application guidance will be added soon."
+          data-uses="Household|Commercial|Industrial">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-cleaners">Cleaners</span><img
+              src="images/products/product-placeholder.svg" alt="Citriclean"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-CLN-030</div>
+            <h3 class="product-name">Citriclean</h3>
+            <p class="product-desc">Placeholder description for a citrus-based cleaner with strong degreasing action.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Dishwashing Liquid Anti-Bacterial. Final formulation details and usage guidance will be added later."
+          data-uses="Household|Commercial|Food Service">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Dishwashing Liquid Anti-Bacterial"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-031</div>
+            <h3 class="product-name">Dishwashing Liquid Anti-Bacterial</h3>
+            <p class="product-desc">Placeholder description for an antibacterial dishwashing liquid with grease-cutting
+              action.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">750ml / 5L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="industrial"
+          data-full-desc="Placeholder product description for Waterless Hand Cleaner (Grit). Full heavy-duty usage guidance will be provided soon."
+          data-uses="Industrial|Automotive|Mining|Workshops">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-industrial">Industrial</span><img
+              src="images/products/product-placeholder.svg" alt="Waterless Hand Cleaner (Grit)"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-IND-032</div>
+            <h3 class="product-name">Waterless Hand Cleaner (Grit)</h3>
+            <p class="product-desc">Placeholder description for a waterless, grit-based hand cleaner for heavy soiling.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-sizes">2kg / 5kg</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="hygiene"
+          data-full-desc="Placeholder product description for Hand Soap (Anti-Bacterial). Full hygiene and skin-care details will be added shortly."
+          data-uses="Household|Healthcare|Commercial|Schools">
+          <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img
+              src="images/products/product-placeholder.svg" alt="Hand Soap (Anti-Bacterial)"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-HYG-033</div>
+            <h3 class="product-name">Hand Soap (Anti-Bacterial)</h3>
+            <p class="product-desc">Placeholder description for an antibacterial hand soap with moisturising properties.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Handy Andy (HAC). Final usage recommendations and formulation notes will be added later."
+          data-uses="Household|Commercial|Hospitality">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Handy Andy (HAC)"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-034</div>
+            <h3 class="product-name">Handy Andy (HAC)</h3>
+            <p class="product-desc">Placeholder description for a HAC-formulated cream cleaner for heavy-duty household
+              and commercial use.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Laundry Liquid. Additional performance details and wash guidance will be added soon."
+          data-uses="Household|Commercial|Laundry Services">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Laundry Liquid"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-035</div>
+            <h3 class="product-name">Laundry Liquid</h3>
+            <p class="product-desc">Placeholder description for a concentrated laundry liquid for everyday fabric care.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="specialty"
+          data-full-desc="Placeholder product description for Car Interior Cleaner. Final surface-safety information and application notes will be added later."
+          data-uses="Automotive|Fleet Management|Car Detailing">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Specialty</span><img
+              src="images/products/product-placeholder.svg" alt="Car Interior Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-SPC-036</div>
+            <h3 class="product-name">Car Interior Cleaner</h3>
+            <p class="product-desc">Placeholder description for a cleaner made for dashboards, plastics, and upholstery
+              interiors.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="hygiene"
+          data-full-desc="Placeholder product description for Shower Shampoo. Full body-wash and bathroom usage details will be added soon."
+          data-uses="Household|Hospitality|Healthcare">
+          <div class="media-block tone-light"><span class="product-category-tag tag-hygiene">Hygiene</span><img
+              src="images/products/product-placeholder.svg" alt="Shower Shampoo"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-HYG-037</div>
+            <h3 class="product-name">Shower Shampoo</h3>
+            <p class="product-desc">Placeholder description for a shower shampoo formulated for everyday hygiene and
+              rinsing comfort.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">5L / 25L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="equipment"
+          data-full-desc="Placeholder product description for High Pressure Washer Gun. Detailed performance specs and attachments will be added soon."
+          data-uses="Cleaning|Automotive|Industrial">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Equipment</span><img
+              src="images/products/product-placeholder.svg" alt="High Pressure Washer Gun"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-EQP-001</div>
+            <h3 class="product-name">High Pressure Washer Gun</h3>
+            <p class="product-desc">Placeholder description for a durable pressure washer gun for heavy-duty cleaning
+              tasks.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">Standard / Pro</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2 2H6a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="equipment"
+          data-full-desc="Placeholder product description for Foam Cannon. Full foam coverage details and compatibility information will be added soon."
+          data-uses="Automotive|Car Wash|Commercial">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Equipment</span><img
+              src="images/products/product-placeholder.svg" alt="Foam Cannon"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-EQP-002</div>
+            <h3 class="product-name">Foam Cannon</h3>
+            <p class="product-desc">Placeholder description for a foam cannon designed for thick, even foam application.
+            </p>
+            <div class="product-card-footer">
+              <span class="product-sizes">1L / 2L</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="equipment"
+          data-full-desc="Placeholder product description for High Pressure Washer. Technical specifications and pressure ratings will be added soon."
+          data-uses="Industrial|Commercial|Automotive">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Equipment</span><img
+              src="images/products/product-placeholder.svg" alt="High Pressure Washer"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-EQP-003</div>
+            <h3 class="product-name">High Pressure Washer</h3>
+            <p class="product-desc">Placeholder description for a high-performance pressure washer for deep cleaning
+              tasks.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">140Bar / 180Bar</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="equipment"
+          data-full-desc="Placeholder product description for Vacuum Cleaner. Full suction and filtration details will be added soon."
+          data-uses="Commercial|Industrial|Hospitality">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Equipment</span><img
+              src="images/products/product-placeholder.svg" alt="Vacuum Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-EQP-004</div>
+            <h3 class="product-name">Vacuum Cleaner</h3>
+            <p class="product-desc">Placeholder description for a powerful vacuum cleaner for dry and wet cleaning
+              applications.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">Compact / Industrial</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="equipment"
+          data-full-desc="Placeholder product description for Steam Cleaner. Additional heating and sanitation information will be added soon."
+          data-uses="Hospitality|Healthcare|Industrial">
+          <div class="media-block tone-steel"><span class="product-category-tag tag-specialty">Equipment</span><img
+              src="images/products/product-placeholder.svg" alt="Steam Cleaner"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-EQP-005</div>
+            <h3 class="product-name">Steam Cleaner</h3>
+            <p class="product-desc">Placeholder description for a steam cleaner designed for sanitising and deep
+              cleaning.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">Portable / Professional</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="equipment"
+          data-full-desc="Placeholder product description for Air Blow Gun. Full airflow and pressure details will be added soon."
+          data-uses="Industrial|Automotive|Workshops">
+          <div class="media-block tone-light"><span class="product-category-tag tag-specialty">Equipment</span><img
+              src="images/products/product-placeholder.svg" alt="Air Blow Gun"></div>
+          <div class="product-card-body">
+            <div class="product-sku">SKU: NC-EQP-006</div>
+            <h3 class="product-name">Air Blow Gun</h3>
+            <p class="product-desc">Placeholder description for an air blow gun used for drying and debris removal.</p>
+            <div class="product-card-footer">
+              <span class="product-sizes">Standard / Heavy Duty</span>
+              <span class="sds-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <path d="M6 2h9l3 3v15a2 2 0 01-2-2V4a2 2 0 012-2z" />
+                </svg></span>
+            </div>
+          </div>
+        </article>
+
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Legal &amp; Tech</div>
-        <ul>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-service.html">Terms of Service</a></li>
-        </ul>
+
+      <div class="catalogue-cta">
+        <div>
+          <span class="eyebrow">Request a Technical Data Sheet (SDS)</span>
+          <p class="body-md">All NovaChem products are manufactured under strict laboratory conditions. We provide
+            comprehensive safety documentation for compliance with industrial health and safety standards.</p>
+
+        </div>
+        <div class="assurance-box">
+          <span class="label-caps" style="color:rgba(255,255,255,0.6);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              style="vertical-align:-2px; margin-right:6px;">
+              <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z" />
+            </svg>
+            Quality Assurance Certified
+          </span>
+          <ul>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg> ISO 9001:2015 Compliant</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg> Biodegradable Formulations</li>
+            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20 6L9 17l-5-5" />
+              </svg> High-Active Concentration</li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-col">
-        <div class="footer-col-title">Contact Us</div>
-        <ul>
-          <li>073 130 3530</li>
-          <li>novachem.future@gmail.com</li>
-          <li>Durban, South Africa</li>
-        </ul>
+
+    </div>
+  </section>
+
+  <!-- Product Detail Modal -->
+  <div class="product-modal-overlay" id="productModalOverlay" role="dialog" aria-modal="true"
+    aria-labelledby="modalProductName">
+    <div class="product-modal-panel" id="productModalPanel">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close product details">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+      <div class="modal-image-wrap">
+        <img id="modalImage" src="" alt="">
+        <span class="modal-category-tag" id="modalCategoryTag"></span>
+      </div>
+      <div class="modal-content-wrap">
+        <div class="modal-meta">
+          <span class="product-sku" id="modalSku"></span>
+          <span class="modal-sizes" id="modalSizes"></span>
+        </div>
+        <h2 class="modal-product-name" id="modalProductName"></h2>
+        <p class="modal-short-desc" id="modalShortDesc"></p>
+        <div class="modal-divider"></div>
+        <div class="modal-full-desc-wrap">
+          <p class="modal-full-desc" id="modalFullDesc"></p>
+          <button class="modal-show-more-btn" id="modalShowMoreBtn" type="button">Show more</button>
+        </div>
+        <div class="modal-uses" id="modalUsesWrap">
+          <div class="modal-uses-label">Suitable For</div>
+          <div class="modal-uses-tags" id="modalUsesTags"></div>
+        </div>
+        <button class="modal-enquire-btn" id="modalEnquireBtn">Enquire About This Product</button>
       </div>
     </div>
-    <div class="footer-bottom">© 2026 NovaChem, Durban, South Africa. 073 130 3530 | novachem.future@gmail.com</div>
   </div>
-</footer>
 
-<script src="js/main.js"></script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>NovaChem</h4>
+          <p>Industrial chemical excellence delivered across South Africa. Precision in every drop.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/novachem_innovations/" aria-label="Instagram"><svg width="16" height="16"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
+              </svg></a>
+            <a href="https://www.tiktok.com/@novachem_innovations?_r=1&_t=ZS-97QQPEQfLev" aria-label="TikTok"><svg
+                width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path
+                  d="M16.5 3c.4 2.1 1.9 3.7 4 4v3.1c-1.5 0-2.9-.4-4-1.2v6.6a5.5 5.5 0 11-5.5-5.5c.3 0 .6 0 .9.1v3.1a2.4 2.4 0 102 2.4V3h2.6z" />
+              </svg></a>
+
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Navigation</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="catalogue.html">Catalogue</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Legal &amp; Tech</div>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Contact Us</div>
+          <ul>
+            <li>073 130 3530</li>
+            <li>novachem.future@gmail.com</li>
+            <li>Durban, South Africa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 NovaChem, Durban, South Africa. 073 130 3530 | novachem.future@gmail.com</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
+
 </html>
