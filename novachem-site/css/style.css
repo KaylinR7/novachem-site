@@ -1,6 +1,6 @@
 /* ==========================================================================
-   NovaChem — "Industrial Integrity" Design System
-   ========================================================================== */
+    NovaChem — "Industrial Integrity" Design System
+    ========================================================================== */
 
 :root {
   /* Color tokens */
@@ -74,8 +74,8 @@
 }
 
 /* ==========================================================================
-   Reset & base
-   ========================================================================== */
+    Reset & base
+    ========================================================================== */
 
 * {
   margin: 0;
@@ -94,6 +94,7 @@ body {
   color: var(--on-surface);
   background: var(--background);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img {
@@ -131,6 +132,8 @@ input, textarea, select {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 var(--margin-mobile);
+  width: 100%;
+  overflow-x: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -140,8 +143,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Typography scale
-   ========================================================================== */
+    Typography scale
+    ========================================================================== */
 
 .headline-display {
   font-family: var(--font-display);
@@ -222,8 +225,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Buttons
-   ========================================================================== */
+    Buttons
+    ========================================================================== */
 
 .btn {
   display: inline-flex;
@@ -283,8 +286,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Header
-   ========================================================================== */
+    Header
+    ========================================================================== */
 
 .site-header {
   position: sticky;
@@ -309,6 +312,21 @@ input, textarea, select {
   color: var(--primary-strong);
   letter-spacing: -0.01em;
   flex-shrink: 0;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.2em;
+  flex-wrap: wrap;
+}
+
+.logo-main {
+  display: inline-block;
+}
+
+.logo-suffix {
+  display: inline-block;
+  font-size: 0.72em;
+  font-weight: 600;
+  opacity: 0.9;
 }
 
 .main-nav {
@@ -430,8 +448,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Hero
-   ========================================================================== */
+    Hero
+    ========================================================================== */
 
 .hero {
   position: relative;
@@ -483,6 +501,43 @@ input, textarea, select {
   gap: 16px;
 }
 
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-media {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+@media (min-width: 480px) {
+  .hero-grid {
+    grid-template-columns: 1fr 160px;
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-grid {
+    grid-template-columns: 1fr 220px;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .hero-media {
+    margin-left: 75px;
+  }
+}
+
 .hero-pillar {
   position: absolute;
   top: 0;
@@ -532,8 +587,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Generic sections
-   ========================================================================== */
+    Generic sections
+    ========================================================================== */
 
 .section {
   padding: 64px 0;
@@ -689,8 +744,8 @@ input, textarea, select {
 .media-badge svg { color: #fff; width: 26px; height: 26px; }
 
 /* ==========================================================================
-   Cards (categories, values, products)
-   ========================================================================== */
+    Cards (categories, values, products)
+    ========================================================================== */
 
 .card-grid {
   display: grid;
@@ -772,8 +827,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   CTA Band
-   ========================================================================== */
+    CTA Band
+    ========================================================================== */
 
 .cta-band {
   background: linear-gradient(120deg, var(--primary-strong), var(--primary));
@@ -816,8 +871,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Footer
-   ========================================================================== */
+    Footer
+    ========================================================================== */
 
 .site-footer {
   background: var(--charcoal-ink);
@@ -889,8 +944,8 @@ input, textarea, select {
 }
 
 /* ==========================================================================
-   Page header / breadcrumb hero (About / Catalogue / Ratings)
-   ========================================================================== */
+    Page header / breadcrumb hero (About / Catalogue / Ratings)
+    ========================================================================== */
 
 .page-hero {
   position: relative;
@@ -918,8 +973,8 @@ input, textarea, select {
 .simple-page-head .body-lg { max-width: 620px; color: var(--steel-gray); }
 
 /* ==========================================================================
-   Table / list helpers
-   ========================================================================== */
+    Table / list helpers
+    ========================================================================== */
 
 .divider {
   height: 1px;
@@ -935,3 +990,68 @@ input, textarea, select {
 .mt-1 { margin-top: 8px; }
 .mt-2 { margin-top: 16px; }
 .text-center { text-align: center; }
+
+/* ==========================================================================
+    Mobile fixes - prevent overflow on right side
+    ========================================================================== */
+
+@media (max-width: 767px) {
+  .split {
+    gap: 24px;
+  }
+}
+
+/* ==========================================================================
+    Infinite Marquee
+    ========================================================================== */
+
+.marquee-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--primary-strong);
+  border-bottom: 1px solid var(--primary-strong);
+}
+
+.marquee-container {
+  display: flex;
+  width: fit-content;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 3rem;
+  padding-right: 3rem;
+}
+
+.marquee-content span {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

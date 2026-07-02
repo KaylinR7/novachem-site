@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Product placeholder</title>
+  <desc id="desc">A simple placeholder graphic for products without an image yet.</desc>
+  <rect width="1200" height="800" rx="40" fill="#f4f7fb"/>
+  <rect x="80" y="80" width="1040" height="640" rx="30" fill="#ffffff" stroke="#d4dce7" stroke-width="6"/>
+  <rect x="180" y="180" width="320" height="320" rx="24" fill="#eef3f9"/>
+  <path d="M260 420c34-74 87-120 144-120 56 0 106 37 140 106" stroke="#4f6c8a" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <circle cx="360" cy="300" r="80" fill="#d9e5f1"/>
+  <rect x="560" y="220" width="420" height="40" rx="20" fill="#4f6c8a"/>
+  <rect x="560" y="300" width="340" height="24" rx="12" fill="#9db0c0"/>
+  <rect x="560" y="350" width="300" height="24" rx="12" fill="#cfd9e4"/>
+  <rect x="560" y="430" width="260" height="24" rx="12" fill="#cfd9e4"/>
+  <text x="600" y="620" fill="#3f5165" font-family="Segoe UI, Arial, sans-serif" font-size="36" font-weight="600">Product Image Placeholder</text>
+</svg>
