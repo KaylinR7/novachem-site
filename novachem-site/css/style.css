@@ -1060,7 +1060,7 @@ input, textarea, select {
   overflow: hidden;
   background-color: var(--primary);
   color: var(--on-primary);
-  padding: 1.5rem 0;
+  padding: 0.55rem 0;
   display: flex;
   align-items: center;
   border-top: 1px solid var(--primary-strong);
@@ -1081,8 +1081,8 @@ input, textarea, select {
   display: flex;
   align-items: center;
   flex-shrink: 0;
-  gap: 3rem;
-  padding-right: 3rem;
+  gap: 2rem;
+  padding-right: 2rem;
 }
 
 .marquee-content span {
@@ -1091,7 +1091,8 @@ input, textarea, select {
   gap: 0.75rem;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 1rem;
+  line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   white-space: nowrap;
