@@ -649,15 +649,15 @@ input, textarea, select {
   display: block;
 }
 
-.media-block.has-image {
-  background: none;
-}
-
 .media-block.tone-steel { background: linear-gradient(135deg, #64748b, #1c2227); }
 .media-block.tone-red { background: linear-gradient(135deg, #c90c18, #410002); }
 .media-block.tone-light {
   background: var(--surface-container-low);
   color: var(--steel-gray);
+}
+
+.media-block.has-image {
+  background: none;
 }
 
 .decorative-panel {
