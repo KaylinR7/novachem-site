@@ -648,6 +648,44 @@ input, textarea, select {
   color: var(--steel-gray);
 }
 
+.decorative-panel {
+  position: relative;
+  background: var(--surface-container-low);
+  border-radius: var(--radius-lg);
+  padding: 34px;
+  min-height: 260px;
+  overflow: hidden;
+  display: grid;
+}
+
+.decorative-panel-content {
+  position: relative;
+  z-index: 1;
+}
+
+.decorative-panel-accent {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.24;
+  pointer-events: none;
+}
+
+.decorative-panel-accent.accent-top {
+  top: -20px;
+  right: -24px;
+  width: 132px;
+  height: 132px;
+  background: rgba(255, 138, 128, 0.24);
+}
+
+.decorative-panel-accent.accent-bottom {
+  bottom: -18px;
+  left: -18px;
+  width: 108px;
+  height: 108px;
+  background: rgba(22, 27, 34, 0.09);
+}
+
 .icon-feature {
   display: flex;
   flex-direction: column;
