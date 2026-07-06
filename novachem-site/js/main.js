@@ -94,6 +94,64 @@ document.addEventListener('DOMContentLoaded', function () {
     sortProducts(1);
   }
 
+  // Modal image gallery for products with multiple images
+  var modalImage = document.getElementById('modalImage');
+  var modalPrevBtn = document.getElementById('modalPrevBtn');
+  var modalNextBtn = document.getElementById('modalNextBtn');
+  var modalImageNav = document.getElementById('modalImageNav');
+  var modalImageIndicator = document.getElementById('modalImageIndicator');
+  var modalGalleryItems = [];
+  var modalGalleryIndex = 0;
+
+  function parseGalleryItems(card) {
+    var items = [];
+    var sources = card.getAttribute('data-gallery-images');
+    var alts = card.getAttribute('data-gallery-alts');
+
+    if (sources) {
+      var sourceList = sources.split(',').map(function (value) { return value.trim(); }).filter(Boolean);
+      var altList = alts ? alts.split(',').map(function (value) { return value.trim(); }).filter(Boolean) : [];
+      sourceList.forEach(function (src, index) {
+        items.push({
+          src: src,
+          alt: altList[index] || ''
+        });
+      });
+    }
+
+    if (!items.length) {
+      var previewImg = card.querySelector('.media-block img');
+      if (previewImg) {
+        items.push({
+          src: previewImg.getAttribute('src') || '',
+          alt: previewImg.getAttribute('alt') || ''
+        });
+      }
+    }
+
+    return items;
+  }
+
+  function updateModalImage(index) {
+    if (!modalImage) return;
+    if (!modalGalleryItems.length) {
+      modalGalleryItems = [{ src: '', alt: '' }];
+    }
+
+    modalGalleryIndex = (index + modalGalleryItems.length) % modalGalleryItems.length;
+    var currentItem = modalGalleryItems[modalGalleryIndex];
+    modalImage.src = currentItem.src;
+    modalImage.alt = currentItem.alt;
+
+    if (modalImageIndicator) {
+      modalImageIndicator.textContent = (modalGalleryIndex + 1) + ' / ' + modalGalleryItems.length;
+    }
+
+    if (modalImageNav) {
+      modalImageNav.hidden = modalGalleryItems.length < 2;
+    }
+  }
+
   // Star input on the review form
   var starButtons = document.querySelectorAll('.star-input button');
   if (starButtons.length) {
@@ -133,8 +191,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var category  = card.getAttribute('data-category') || '';
       var catTag    = card.querySelector('.product-category-tag');
 
-      document.getElementById('modalImage').src = img ? img.src : '';
-      document.getElementById('modalImage').alt = img ? img.alt : name;
+      modalGalleryItems = parseGalleryItems(card);
+      updateModalImage(0);
       document.getElementById('modalProductName').textContent = name;
       document.getElementById('modalSku').textContent = sku;
       document.getElementById('modalSizes').textContent = sizes;
@@ -169,6 +227,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModal() {
       overlay.classList.remove('open');
       document.body.style.overflow = '';
+      modalGalleryItems = [];
+      modalGalleryIndex = 0;
+      if (modalImage) {
+        modalImage.src = '';
+        modalImage.alt = '';
+      }
       var modalFullDesc = document.getElementById('modalFullDesc');
       var modalShowMoreBtn = document.getElementById('modalShowMoreBtn');
       if (modalFullDesc) {
@@ -186,6 +250,18 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!modalFullDesc) return;
         var isExpanded = modalFullDesc.classList.toggle('is-expanded');
         modalShowMoreBtn.textContent = isExpanded ? 'Show less' : 'Show more';
+      });
+    }
+
+    if (modalPrevBtn) {
+      modalPrevBtn.addEventListener('click', function () {
+        updateModalImage(modalGalleryIndex - 1);
+      });
+    }
+
+    if (modalNextBtn) {
+      modalNextBtn.addEventListener('click', function () {
+        updateModalImage(modalGalleryIndex + 1);
       });
     }
 
