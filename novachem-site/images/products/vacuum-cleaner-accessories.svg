@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" role="img" aria-label="Vacuum cleaner accessories">
+  <rect width="800" height="700" rx="32" fill="#f3f6fb"/>
+  <rect x="110" y="180" width="260" height="190" rx="26" fill="#2f4f6f"/>
+  <rect x="140" y="210" width="200" height="126" rx="20" fill="#dce7f5"/>
+  <rect x="390" y="120" width="250" height="260" rx="32" fill="#4b78a5"/>
+  <circle cx="515" cy="290" r="82" fill="#ffffff"/>
+  <rect x="520" y="430" width="140" height="78" rx="18" fill="#223b57"/>
+  <rect x="300" y="425" width="180" height="112" rx="24" fill="#4f6b85"/>
+  <rect x="240" y="490" width="100" height="60" rx="16" fill="#6e8fae"/>
+  <path d="M150 530h210" stroke="#88a5c5" stroke-width="20" stroke-linecap="round"/>
+  <path d="M540 370l72 72" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+  <path d="M612 370l-72 72" stroke="#ffffff" stroke-width="16" stroke-linecap="round"/>
+  <path d="M590 230c24 0 40 16 40 40" stroke="#f4f7fb" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="365" cy="260" r="18" fill="#f5b942"/>
+</svg>

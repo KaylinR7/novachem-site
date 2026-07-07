@@ -119,6 +119,80 @@
   position: relative;
 }
 
+.product-image-gallery {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-image-gallery .gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.product-image-gallery .gallery-image.is-active {
+  display: block;
+}
+
+.product-image-gallery .gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(10, 14, 22, 0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.product-image-gallery.is-hovered .gallery-nav,
+.product-image-gallery.is-interacting .gallery-nav {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.product-image-gallery .gallery-nav:hover {
+  transform: translateY(-50%) scale(1.04);
+}
+
+.product-image-gallery .gallery-nav-prev {
+  left: 10px;
+}
+
+.product-image-gallery .gallery-nav-next {
+  right: 10px;
+}
+
+.product-image-gallery .gallery-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(10, 14, 22, 0.75);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.product-image-gallery.is-hovered .gallery-indicator,
+.product-image-gallery.is-interacting .gallery-indicator {
+  opacity: 1;
+}
+
 .product-category-tag {
   position: absolute;
   top: 10px;
@@ -350,6 +424,42 @@
   padding: 32px;
   box-sizing: border-box;
   display: block;
+}
+
+.modal-image-nav {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(10, 14, 22, 0.75);
+  padding: 8px 12px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.modal-image-nav-btn {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.92);
+  color: var(--charcoal-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.modal-image-indicator {
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  min-width: 42px;
+  text-align: center;
 }
 
 .modal-category-tag {
