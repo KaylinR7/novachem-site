@@ -608,23 +608,6 @@
   background: var(--surface-container-low);
 }
 
-.modal-enquire-btn {
-  margin-top: auto;
-  padding: 14px 24px;
-  background: var(--charcoal-ink);
-  color: #fff;
-  border-radius: var(--radius);
-  font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  width: 100%;
-  transition: background 0.2s ease;
-}
-
-.modal-enquire-btn:hover { background: var(--primary-strong); }
-
 /* Mobile — slide up from bottom (unchanged) */
 @media (max-width: 600px) {
   .product-modal-overlay {
