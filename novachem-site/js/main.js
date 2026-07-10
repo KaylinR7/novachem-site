@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (enquireProduct) enquireProduct.value = name;
       if (enquireSubject) enquireSubject.value = 'Product enquiry: ' + name;
       if (whatsappBtn) {
-        var waNumber = '+27738520277'; // NovaChem WhatsApp (073 130 3530)
+        var waNumber = '+27731303530'; // NovaChem WhatsApp (073 130 3530)
         var waText = 'Hi NovaChem, I would like to enquire about your ' + name + '.';
         whatsappBtn.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(waText);
       }
