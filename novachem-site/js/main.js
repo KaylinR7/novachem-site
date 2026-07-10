@@ -220,6 +220,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       }
 
+      // Populate enquiry form / WhatsApp with the current product
+      var enquireProduct = document.getElementById('enquireProduct');
+      var enquireSubject = document.getElementById('enquireSubject');
+      var whatsappBtn = document.getElementById('modalWhatsappBtn');
+      if (enquireProduct) enquireProduct.value = name;
+      if (enquireSubject) enquireSubject.value = 'Product enquiry: ' + name;
+      if (whatsappBtn) {
+        var waNumber = '+27738520277'; // NovaChem WhatsApp (073 130 3530)
+        var waText = 'Hi NovaChem, I would like to enquire about your ' + name + '.';
+        whatsappBtn.href = 'https://wa.me/' + waNumber + '?text=' + encodeURIComponent(waText);
+      }
+      // Reset any previous submission state
+      var enquireStatus = document.getElementById('enquireStatus');
+      if (enquireStatus) {
+        enquireStatus.hidden = true;
+        enquireStatus.className = 'enquire-status';
+        enquireStatus.textContent = '';
+      }
+
       overlay.classList.add('open');
       document.body.style.overflow = 'hidden';
     }
@@ -262,6 +281,61 @@ document.addEventListener('DOMContentLoaded', function () {
     if (modalNextBtn) {
       modalNextBtn.addEventListener('click', function () {
         updateModalImage(modalGalleryIndex + 1);
+      });
+    }
+
+    // Enquiry form submission (Web3Forms AJAX — no page reload)
+    var enquireForm = document.getElementById('modalEnquireForm');
+    if (enquireForm) {
+      enquireForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var submitBtn = document.getElementById('enquireSubmitBtn');
+        var status = document.getElementById('enquireStatus');
+        var data = new FormData(enquireForm);
+
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending…';
+        }
+        if (status) {
+          status.hidden = true;
+          status.className = 'enquire-status';
+        }
+
+        fetch(enquireForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(function (res) { return res.json(); })
+          .then(function (json) {
+            if (json.success) {
+              var productField = document.getElementById('enquireProduct');
+              var keepProduct = productField ? productField.value : '';
+              enquireForm.reset();
+              if (productField) productField.value = keepProduct;
+              if (status) {
+                status.textContent = 'Thanks! Your enquiry has been sent. We\'ll be in touch soon.';
+                status.className = 'enquire-status is-success';
+                status.hidden = false;
+              }
+            } else {
+              throw new Error(json.message || 'Submission failed');
+            }
+          })
+          .catch(function () {
+            if (status) {
+              status.textContent = 'Sorry, something went wrong. Please try again or reach us on WhatsApp.';
+              status.className = 'enquire-status is-error';
+              status.hidden = false;
+            }
+          })
+          .then(function () {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = 'Send Enquiry';
+            }
+          });
       });
     }
 

@@ -608,6 +608,152 @@
   background: var(--surface-container-low);
 }
 
+/* Enquiry section */
+.modal-enquire {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enquire-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 16px;
+  border-radius: var(--radius-md);
+  background: #25d366;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.enquire-whatsapp-btn:hover {
+  background: #1eb855;
+}
+
+.enquire-whatsapp-btn svg {
+  flex-shrink: 0;
+}
+
+.enquire-divider-text {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--steel-gray);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.enquire-divider-text::before,
+.enquire-divider-text::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-default);
+}
+
+.enquire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.enquire-hp {
+  display: none !important;
+}
+
+.enquire-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.enquire-field label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--steel-gray);
+}
+
+.enquire-field label span {
+  color: var(--primary-strong);
+}
+
+.enquire-field label span.enquire-optional {
+  color: var(--steel-gray);
+  font-weight: 500;
+}
+
+.enquire-field input,
+.enquire-field textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  background: var(--surface-container-lowest);
+  color: var(--charcoal-ink);
+  font-family: var(--font-body, inherit);
+  font-size: 14px;
+  resize: vertical;
+}
+
+.enquire-field input:focus,
+.enquire-field textarea:focus {
+  outline: none;
+  border-color: var(--primary-strong);
+  box-shadow: 0 0 0 2px rgba(201, 12, 24, 0.12);
+}
+
+.enquire-field input[readonly] {
+  background: var(--surface-container-low);
+  color: var(--steel-gray);
+  cursor: default;
+}
+
+.enquire-submit-btn {
+  margin-top: 2px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--primary-strong);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.enquire-submit-btn:hover {
+  background: #a80a14;
+}
+
+.enquire-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.enquire-status {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.enquire-status.is-success {
+  color: #15803d;
+}
+
+.enquire-status.is-error {
+  color: var(--primary-strong);
+}
+
 /* Mobile — slide up from bottom (unchanged) */
 @media (max-width: 600px) {
   .product-modal-overlay {

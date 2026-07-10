@@ -917,6 +917,56 @@
           <div class="modal-uses-label">Suitable For</div>
           <div class="modal-uses-tags" id="modalUsesTags"></div>
         </div>
+
+        <div class="modal-divider"></div>
+
+        <!-- Enquiry section -->
+        <div class="modal-enquire">
+          <div class="modal-uses-label">Enquire About This Product</div>
+
+          <a href="#" class="enquire-whatsapp-btn" id="modalWhatsappBtn" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+              <path d="M17.5 14.4c-.3-.2-1.7-.8-2-.9-.3-.1-.5-.2-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.4-1.4-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2.1-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 5 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4z"/>
+              <path d="M12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.4 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.3c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3c-.8-1.3-1.3-2.9-1.3-4.5 0-4.6 3.7-8.3 8.3-8.3s8.3 3.7 8.3 8.3-3.7 8.4-8.2 8.4z"/>
+            </svg>
+            Enquire on WhatsApp
+          </a>
+
+          <div class="enquire-divider-text"><span>or send a message</span></div>
+
+          <form class="enquire-form" id="modalEnquireForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms: replace with the client's access key from https://web3forms.com (tied to novachem.future@gmail.com) -->
+            <input type="hidden" name="access_key" value="e54980f3-289c-4961-b57a-9d1e202146d0">
+            <input type="hidden" name="subject" id="enquireSubject" value="New product enquiry from NovaChem website">
+            <input type="hidden" name="from_name" value="NovaChem Website Enquiry">
+            <!-- Honeypot spam protection -->
+            <input type="checkbox" name="botcheck" class="enquire-hp" tabindex="-1" autocomplete="off">
+
+            <div class="enquire-field">
+              <label for="enquireProduct">Product</label>
+              <input type="text" id="enquireProduct" name="product" readonly>
+            </div>
+            <div class="enquire-field">
+              <label for="enquireName">Name <span>*</span></label>
+              <input type="text" id="enquireName" name="name" required autocomplete="name">
+            </div>
+            <div class="enquire-field">
+              <label for="enquireEmail">Email <span>*</span></label>
+              <input type="email" id="enquireEmail" name="email" required autocomplete="email">
+            </div>
+            <div class="enquire-field">
+              <label for="enquirePhone">Phone <span class="enquire-optional">(optional)</span></label>
+              <input type="tel" id="enquirePhone" name="phone" autocomplete="tel">
+            </div>
+            <div class="enquire-field">
+              <label for="enquireMessage">Message <span>*</span></label>
+              <textarea id="enquireMessage" name="message" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="enquire-submit-btn" id="enquireSubmitBtn">Send Enquiry</button>
+            <p class="enquire-status" id="enquireStatus" role="status" aria-live="polite" hidden></p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
