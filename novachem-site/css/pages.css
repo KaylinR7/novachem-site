@@ -428,37 +428,52 @@
 
 .modal-image-nav {
   position: absolute;
-  bottom: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(10, 14, 22, 0.75);
-  padding: 8px 12px;
-  border-radius: 999px;
-  backdrop-filter: blur(6px);
+  inset: 0;
+  pointer-events: none;
 }
 
 .modal-image-nav-btn {
-  width: 32px;
-  height: 32px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+  width: 40px;
+  height: 40px;
   border: none;
   border-radius: 50%;
   background: rgba(255,255,255,0.92);
   color: var(--charcoal-ink);
+  font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  transition: background 0.15s ease, transform 0.15s ease;
 }
 
+.modal-image-nav-btn:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.06);
+}
+
+#modalPrevBtn { left: 14px; }
+#modalNextBtn { right: 14px; }
+
 .modal-image-indicator {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: auto;
+  background: rgba(10, 14, 22, 0.75);
+  backdrop-filter: blur(6px);
+  padding: 5px 12px;
+  border-radius: 999px;
   color: #fff;
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.04em;
-  min-width: 42px;
   text-align: center;
 }
 
