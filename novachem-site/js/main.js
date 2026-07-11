@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
       cards.forEach(function (card) {
         var category = card.getAttribute('data-category');
         var name = card.querySelector('.product-name').textContent.toLowerCase();
-        var sku = card.querySelector('.product-sku').textContent.toLowerCase();
+        var skuEl = card.querySelector('.product-sku');
+        var sku = skuEl ? skuEl.textContent.toLowerCase() : '';
         var desc = card.querySelector('.product-desc').textContent.toLowerCase();
         var matchesCategory = (activeFilter === 'all' || category === activeFilter);
         var matchesSearch = (query === '' || name.indexOf(query) !== -1 || sku.indexOf(query) !== -1 || desc.indexOf(query) !== -1);
@@ -183,7 +184,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function openModal(card) {
       var img       = card.querySelector('img');
       var name      = card.querySelector('.product-name').textContent;
-      var sku       = card.querySelector('.product-sku').textContent;
       var shortDesc = card.querySelector('.product-desc').textContent;
       var sizes     = card.querySelector('.product-sizes').textContent.trim();
       var fullDesc  = card.getAttribute('data-full-desc') || '';
@@ -194,7 +194,6 @@ document.addEventListener('DOMContentLoaded', function () {
       modalGalleryItems = parseGalleryItems(card);
       updateModalImage(0);
       document.getElementById('modalProductName').textContent = name;
-      document.getElementById('modalSku').textContent = sku;
       document.getElementById('modalSizes').textContent = sizes;
       var modalFullDesc = document.getElementById('modalFullDesc');
       var modalShowMoreBtn = document.getElementById('modalShowMoreBtn');
